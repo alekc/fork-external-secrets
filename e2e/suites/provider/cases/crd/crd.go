@@ -1,0 +1,184 @@
+/*
+Copyright © The ESO Authors
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+package crd
+
+import (
+	"time"
+
+	// nolint
+	. "github.com/onsi/ginkgo/v2"
+
+	// nolint
+	. "github.com/onsi/gomega"
+	corev1 "k8s.io/api/core/v1"
+	"sigs.k8s.io/controller-runtime/pkg/client"
+
+	"github.com/external-secrets/external-secrets-e2e/framework"
+	esv1 "github.com/external-secrets/external-secrets/apis/externalsecrets/v1"
+)
+
+var _ = Describe("[crd] ", Label("crd"), func() {
+	f := framework.New("eso-crd")
+	prov := NewProvider(f)
+
+	DescribeTable("sync secrets",
+		framework.TableFuncWithExternalSecret(f, prov),
+		Entry(syncProperty(f)),
+		Entry(syncGJSONQuery(f)),
+		Entry(syncMapFromExtract(f)),
+		Entry(syncReferentClusterStore(f)),
+		Entry(syncWithWhitelist(f)),
+		Entry(findByName(f)),
+	)
+})
+
+// syncProperty reads a single scalar property out of a namespaced CR via the
+// default SecretStore.
+func syncProperty(_ *framework.Framework) (string, func(*framework.TestCase)) {
+	return "[crd] should sync a property from a namespaced CR", func(tc *framework.TestCase) {
+		tc.Secrets = map[string]framework.SecretEntry{
+			"e2e-crd-a": {Value: `{"user":"app-user","password":"s3cr3t"}`},
+		}
+		tc.ExpectedSecret = &corev1.Secret{
+			Type: corev1.SecretTypeOpaque,
+			Data: map[string][]byte{"pw": []byte("s3cr3t")},
+		}
+		tc.ExternalSecret.Spec.Data = []esv1.ExternalSecretData{
+			{
+				SecretKey: "pw",
+				RemoteRef: esv1.ExternalSecretDataRemoteRef{Key: "e2e-crd-a", Property: "spec.password"},
+			},
+		}
+	}
+}
+
+// syncGJSONQuery proves the GJSON path dialect works end to end, including array
+// queries.
+func syncGJSONQuery(_ *framework.Framework) (string, func(*framework.TestCase)) {
+	return "[crd] should evaluate a gjson query property", func(tc *framework.TestCase) {
+		tc.Secrets = map[string]framework.SecretEntry{
+			"e2e-crd-b": {Value: `{"targets":[{"name":"db","val":"db:5432"},{"name":"cache","val":"c:6379"}]}`},
+		}
+		tc.ExpectedSecret = &corev1.Secret{
+			Type: corev1.SecretTypeOpaque,
+			Data: map[string][]byte{"endpoint": []byte("db:5432")},
+		}
+		tc.ExternalSecret.Spec.Data = []esv1.ExternalSecretData{
+			{
+				SecretKey: "endpoint",
+				RemoteRef: esv1.ExternalSecretDataRemoteRef{Key: "e2e-crd-b", Property: `spec.targets.#(name=="db").val`},
+			},
+		}
+	}
+}
+
+// syncMapFromExtract extracts a sub-object into a flat map via dataFrom.extract
+// (GetSecretMap).
+func syncMapFromExtract(_ *framework.Framework) (string, func(*framework.TestCase)) {
+	return "[crd] should extract a sub-object into a map via dataFrom", func(tc *framework.TestCase) {
+		tc.Secrets = map[string]framework.SecretEntry{
+			"e2e-crd-c": {Value: `{"creds":{"username":"admin","password":"p@ss"}}`},
+		}
+		tc.ExpectedSecret = &corev1.Secret{
+			Type: corev1.SecretTypeOpaque,
+			Data: map[string][]byte{
+				"username": []byte("admin"),
+				"password": []byte("p@ss"),
+			},
+		}
+		tc.ExternalSecret.Spec.DataFrom = []esv1.ExternalSecretDataFromRemoteRef{
+			{Extract: &esv1.ExternalSecretDataRemoteRef{Key: "e2e-crd-c", Property: "spec.creds"}},
+		}
+	}
+}
+
+// syncReferentClusterStore exercises referent authentication: the referent
+// ClusterSecretStore resolves the ServiceAccount in the ExternalSecret's own
+// namespace, and the key uses the ClusterSecretStore namespace/name form.
+func syncReferentClusterStore(f *framework.Framework) (string, func(*framework.TestCase)) {
+	return "[crd] should sync via a referent ClusterSecretStore with namespace/name key", func(tc *framework.TestCase) {
+		tc.Secrets = map[string]framework.SecretEntry{
+			"e2e-crd-d": {Value: `{"token":"abc123"}`},
+		}
+		tc.ExpectedSecret = &corev1.Secret{
+			Type: corev1.SecretTypeOpaque,
+			Data: map[string][]byte{"token": []byte("abc123")},
+		}
+		tc.ExternalSecret.Spec.SecretStoreRef.Name = referentStoreName(f)
+		tc.ExternalSecret.Spec.SecretStoreRef.Kind = esv1.ClusterSecretStoreKind
+		tc.ExternalSecret.Spec.Data = []esv1.ExternalSecretData{
+			{
+				SecretKey: "token",
+				RemoteRef: esv1.ExternalSecretDataRemoteRef{Key: f.Namespace.Name + "/e2e-crd-d", Property: "spec.token"},
+			},
+		}
+	}
+}
+
+// syncWithWhitelist proves the whitelist wiring: the store only allows names
+// matching "^e2e-crd-.*$" and the property "spec.password", and this request
+// satisfies both.
+func syncWithWhitelist(f *framework.Framework) (string, func(*framework.TestCase)) {
+	return "[crd] should honor an allowing whitelist", func(tc *framework.TestCase) {
+		tc.Secrets = map[string]framework.SecretEntry{
+			"e2e-crd-e": {Value: `{"password":"wl-pass"}`},
+		}
+		tc.ExpectedSecret = &corev1.Secret{
+			Type: corev1.SecretTypeOpaque,
+			Data: map[string][]byte{"password": []byte("wl-pass")},
+		}
+		tc.ExternalSecret.Spec.SecretStoreRef.Name = whitelistStoreName(f)
+		tc.ExternalSecret.Spec.Data = []esv1.ExternalSecretData{
+			{
+				SecretKey: "password",
+				RemoteRef: esv1.ExternalSecretDataRemoteRef{Key: "e2e-crd-e", Property: "spec.password"},
+			},
+		}
+	}
+}
+
+// findByName lists CRs by a name regex via dataFrom.find (GetAllSecrets). Because
+// GetAllSecrets returns the full object JSON (with server-set metadata) an exact
+// ExpectedSecret match is not possible, so the outcome is asserted leniently: the
+// matching keys are present, the non-matching one is absent, and a spec marker is
+// carried through.
+func findByName(f *framework.Framework) (string, func(*framework.TestCase)) {
+	return "[crd] should find CRs by name via dataFrom.find", func(tc *framework.TestCase) {
+		tc.Secrets = map[string]framework.SecretEntry{
+			"e2e-crd-find-one": {Value: `{"marker":"one"}`},
+			"e2e-crd-find-two": {Value: `{"marker":"two"}`},
+			"e2e-crd-other":    {Value: `{"marker":"other"}`},
+		}
+		tc.ExternalSecret.Spec.DataFrom = []esv1.ExternalSecretDataFromRemoteRef{
+			{Find: &esv1.ExternalSecretFind{Name: &esv1.FindName{RegExp: "e2e-crd-find-.+"}}},
+		}
+		tc.ExpectedSecret = nil
+		tc.AfterSync = func(_ framework.SecretStoreProvider, _ *corev1.Secret) {
+			Eventually(func(g Gomega) {
+				sec := &corev1.Secret{}
+				g.Expect(f.CRClient.Get(GinkgoT().Context(), client.ObjectKey{
+					Namespace: f.Namespace.Name,
+					Name:      framework.TargetSecretName,
+				}, sec)).To(Succeed())
+				g.Expect(sec.Data).To(HaveKey("e2e-crd-find-one"))
+				g.Expect(sec.Data).To(HaveKey("e2e-crd-find-two"))
+				g.Expect(sec.Data).ToNot(HaveKey("e2e-crd-other"))
+				g.Expect(string(sec.Data["e2e-crd-find-one"])).To(ContainSubstring(`"marker":"one"`))
+			}, time.Minute, time.Second).Should(Succeed())
+		}
+	}
+}
