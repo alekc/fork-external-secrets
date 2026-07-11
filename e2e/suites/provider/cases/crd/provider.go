@@ -197,10 +197,28 @@ func clusterRoleName(ns string) string {
 }
 
 // crdProviderSpec returns a CRD provider that authenticates as the namespace's
-// default ServiceAccount (simple in-cluster mode).
+// default ServiceAccount via auth.serviceAccount. Server is omitted, so the URL
+// defaults to the in-cluster API. The ServiceAccount selector carries no
+// namespace, so for a ClusterSecretStore it resolves as referent auth (in the
+// consuming ExternalSecret's namespace); for a SecretStore it resolves in the
+// store's own namespace.
 func crdProviderSpec() *esv1.CRDProvider {
 	return &esv1.CRDProvider{
-		ServiceAccountRef: &esmeta.ServiceAccountSelector{Name: "default"},
+		// Read the local cluster. Server.URL is omitted, so it defaults to the
+		// in-cluster API (kubernetes.default). The API server's CA is published
+		// in every namespace as the kube-root-ca.crt ConfigMap; reference it the
+		// same way the Kubernetes provider does, otherwise the TLS handshake to
+		// the API falls back to system roots and fails.
+		Server: esv1.KubernetesServer{
+			CAProvider: &esv1.CAProvider{
+				Type: esv1.CAProviderTypeConfigMap,
+				Name: "kube-root-ca.crt",
+				Key:  "ca.crt",
+			},
+		},
+		Auth: &esv1.KubernetesAuth{
+			ServiceAccount: &esmeta.ServiceAccountSelector{Name: "default"},
+		},
 		Resource: esv1.CRDProviderResource{
 			Group:   crdGroup,
 			Version: crdVersion,
@@ -268,7 +286,7 @@ func (s *Provider) CreateWhitelistStore() {
 	Expect(s.framework.CRClient.Create(GinkgoT().Context(), store)).To(Succeed())
 }
 
-// CreateReferentStore creates a referent ClusterSecretStore: its serviceAccountRef
+// CreateReferentStore creates a referent ClusterSecretStore: its auth.serviceAccount
 // carries no namespace, so the SA is resolved in the consuming ExternalSecret's
 // namespace. For a ClusterSecretStore over a namespaced kind the provider runs a
 // cluster-wide SelfSubjectAccessReview, so the SA needs a ClusterRole even when a
@@ -306,5 +324,8 @@ func (s *Provider) CreateReferentStore() {
 			Provider: &esv1.SecretStoreProvider{CRD: crdProviderSpec()},
 		},
 	}
+	// A ClusterSecretStore requires CAProvider.namespace (a SecretStore must
+	// leave it empty), so pin it to the namespace holding the CA ConfigMap.
+	css.Spec.Provider.CRD.Server.CAProvider.Namespace = &ns
 	Expect(s.framework.CRClient.Create(GinkgoT().Context(), css)).To(Succeed())
 }
