@@ -91,11 +91,13 @@ func (s *Provider) AfterEach() {
 	})
 }
 
-// CreateSecret seeds an E2ETestResource CR whose spec holds the parsed JSON value.
-// The framework calls this for every entry in tc.Secrets.
+// CreateSecret seeds an E2ETestResource CR from the parsed JSON value. The
+// framework calls this for every entry in tc.Secrets. A value with a top-level
+// "spec" key is applied as a spec/status envelope (so a test can also seed
+// status); any other value is taken as the spec body.
 func (s *Provider) CreateSecret(key string, val framework.SecretEntry) {
-	spec := map[string]any{}
-	err := json.Unmarshal([]byte(val.Value), &spec)
+	body := map[string]any{}
+	err := json.Unmarshal([]byte(val.Value), &body)
 	Expect(err).ToNot(HaveOccurred())
 
 	obj := &unstructured.Unstructured{}
@@ -105,7 +107,14 @@ func (s *Provider) CreateSecret(key string, val framework.SecretEntry) {
 	if len(val.Tags) > 0 {
 		obj.SetLabels(val.Tags)
 	}
-	obj.Object["spec"] = spec
+	if spec, ok := body["spec"]; ok {
+		obj.Object["spec"] = spec
+		if status, ok := body["status"]; ok {
+			obj.Object["status"] = status
+		}
+	} else {
+		obj.Object["spec"] = body
+	}
 
 	err = s.framework.CRClient.Create(GinkgoT().Context(), obj)
 	Expect(err).ToNot(HaveOccurred())
@@ -165,9 +174,15 @@ func testCRD() *apiextensionsv1.CustomResourceDefinition {
 						OpenAPIV3Schema: &apiextensionsv1.JSONSchemaProps{
 							Type: "object",
 							Properties: map[string]apiextensionsv1.JSONSchemaProps{
-								// spec carries arbitrary content: the provider reads
-								// fields out of it via a GJSON path.
+								// spec and status carry arbitrary content: the
+								// provider reads fields out of either via a GJSON
+								// path. No status subresource is declared, so a test
+								// can seed status on create.
 								"spec": {
+									Type:                   "object",
+									XPreserveUnknownFields: new(true),
+								},
+								"status": {
 									Type:                   "object",
 									XPreserveUnknownFields: new(true),
 								},

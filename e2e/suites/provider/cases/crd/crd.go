@@ -25,6 +25,7 @@ import (
 	// nolint
 	. "github.com/onsi/gomega"
 	corev1 "k8s.io/api/core/v1"
+	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
 	"github.com/external-secrets/external-secrets-e2e/framework"
@@ -42,7 +43,9 @@ var _ = Describe("[crd] ", Label("crd"), func() {
 		Entry(syncMapFromExtract(f)),
 		Entry(syncReferentClusterStore(f)),
 		Entry(syncWithWhitelist(f)),
+		Entry(denyByWhitelist(f)),
 		Entry(findByName(f)),
+		Entry(syncFromStatusArray(f)),
 	)
 })
 
@@ -179,6 +182,75 @@ func findByName(f *framework.Framework) (string, func(*framework.TestCase)) {
 				g.Expect(sec.Data).ToNot(HaveKey("e2e-crd-other"))
 				g.Expect(string(sec.Data["e2e-crd-find-one"])).To(ContainSubstring(`"marker":"one"`))
 			}, time.Minute, time.Second).Should(Succeed())
+		}
+	}
+}
+
+// denyByWhitelist proves the whitelist denies a request it does not allow. The
+// whitelist store permits name "^e2e-crd-.*$" only for property spec.password;
+// this request has a matching name but asks for spec.username, so it must be
+// refused: no target Secret is produced and the ExternalSecret goes not-ready.
+func denyByWhitelist(f *framework.Framework) (string, func(*framework.TestCase)) {
+	return "[crd] should deny a request the whitelist does not allow", func(tc *framework.TestCase) {
+		tc.Secrets = map[string]framework.SecretEntry{
+			"e2e-crd-denied": {Value: `{"username":"nope","password":"ok"}`},
+		}
+		tc.ExpectedSecret = nil
+		tc.ExternalSecret.Spec.SecretStoreRef.Name = whitelistStoreName(f)
+		tc.ExternalSecret.Spec.Data = []esv1.ExternalSecretData{
+			{
+				SecretKey: "username",
+				RemoteRef: esv1.ExternalSecretDataRemoteRef{Key: "e2e-crd-denied", Property: "spec.username"},
+			},
+		}
+		tc.AfterSync = func(_ framework.SecretStoreProvider, _ *corev1.Secret) {
+			// A denied request must never produce the target Secret.
+			Consistently(func(g Gomega) {
+				sec := &corev1.Secret{}
+				err := f.CRClient.Get(GinkgoT().Context(), client.ObjectKey{
+					Namespace: f.Namespace.Name,
+					Name:      framework.TargetSecretName,
+				}, sec)
+				g.Expect(apierrors.IsNotFound(err)).To(BeTrue())
+			}, 15*time.Second, 3*time.Second).Should(Succeed())
+
+			// The ExternalSecret must surface the denial as a not-ready condition.
+			Eventually(func(g Gomega) {
+				es := &esv1.ExternalSecret{}
+				g.Expect(f.CRClient.Get(GinkgoT().Context(), client.ObjectKey{
+					Namespace: tc.ExternalSecret.Namespace,
+					Name:      tc.ExternalSecret.Name,
+				}, es)).To(Succeed())
+				var ready *esv1.ExternalSecretStatusCondition
+				for i := range es.Status.Conditions {
+					if es.Status.Conditions[i].Type == esv1.ExternalSecretReady {
+						ready = &es.Status.Conditions[i]
+					}
+				}
+				g.Expect(ready).ToNot(BeNil(), "expected a Ready condition on the ExternalSecret")
+				g.Expect(ready.Status).To(Equal(corev1.ConditionFalse))
+			}, time.Minute, 2*time.Second).Should(Succeed())
+		}
+	}
+}
+
+// syncFromStatusArray reads a value out of a status array of objects via a GJSON
+// array query. The CR is seeded with a spec/status envelope so status carries
+// condition-like entries; the request selects one by a field match.
+func syncFromStatusArray(_ *framework.Framework) (string, func(*framework.TestCase)) {
+	return "[crd] should read a value from a status array of objects", func(tc *framework.TestCase) {
+		tc.Secrets = map[string]framework.SecretEntry{
+			"e2e-crd-status": {Value: `{"spec":{"noop":true},"status":{"conditions":[{"type":"Ready","value":"synced-at-12:00"},{"type":"Degraded","value":"n/a"}]}}`},
+		}
+		tc.ExpectedSecret = &corev1.Secret{
+			Type: corev1.SecretTypeOpaque,
+			Data: map[string][]byte{"ready": []byte("synced-at-12:00")},
+		}
+		tc.ExternalSecret.Spec.Data = []esv1.ExternalSecretData{
+			{
+				SecretKey: "ready",
+				RemoteRef: esv1.ExternalSecretDataRemoteRef{Key: "e2e-crd-status", Property: `status.conditions.#(type=="Ready").value`},
+			},
 		}
 	}
 }
