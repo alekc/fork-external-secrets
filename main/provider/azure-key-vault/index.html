@@ -9,14 +9,17 @@
       
       
       
-        <link rel="prev" href="../aws-parameter-store/">
+        <link rel="prev" href="../aws-access/">
       
       
-        <link rel="next" href="../beyondtrust/">
+        <link rel="next" href="../barbican/">
+      
+      
+        
       
       
       <link rel="icon" href="../../pictures/eso-round-logo.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -24,10 +27,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -60,7 +63,6 @@
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
   
 
-    
     
     
   </head>
@@ -102,7 +104,7 @@
   </a>
 
             </div>
-            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
           </aside>
         
       </div>
@@ -169,11 +171,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -205,13 +209,14 @@
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
         <a href="https://github.com/external-secrets/external-secrets" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     External Secrets Operator
@@ -237,11 +242,13 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../.." class="md-tabs__link">
           
+  
   
     
   
@@ -257,11 +264,13 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../api/components/" class="md-tabs__link">
           
+  
   
     
   
@@ -277,11 +286,13 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../guides/introduction/" class="md-tabs__link">
           
+  
   
     
   
@@ -296,6 +307,7 @@
         
   
   
+  
     
   
   
@@ -304,6 +316,7 @@
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../aws-secrets-manager/" class="md-tabs__link">
           
+  
   
     
   
@@ -319,11 +332,13 @@
   
   
   
+  
     
     
       <li class="md-tabs__item">
         <a href="../../examples/gitops-using-fluxcd/" class="md-tabs__link">
           
+  
   
     
   
@@ -339,9 +354,11 @@
   
   
   
+  
     
     
       
+  
   
   
   
@@ -350,6 +367,7 @@
       <li class="md-tabs__item">
         <a href="../../contributing/devguide/" class="md-tabs__link">
           
+  
   
     
   
@@ -398,7 +416,7 @@
       <a href="https://github.com/external-secrets/external-secrets" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     External Secrets Operator
@@ -437,6 +455,7 @@
       
     
     
+    
       
       
     
@@ -450,14 +469,20 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../.." class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
+    
+  
     Introduction
+  
+
+    
   </span>
+  
   
 
             </a>
@@ -472,7 +497,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
-            Introduction
+            
+  
+    Introduction
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -488,9 +517,16 @@
       <a href="../../introduction/overview/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Overview
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -509,9 +545,16 @@
       <a href="../../introduction/glossary/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Glossary
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -530,9 +573,16 @@
       <a href="../../introduction/prerequisites/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Prerequisites
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -551,9 +601,16 @@
       <a href="../../introduction/getting-started/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Getting started
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -572,9 +629,16 @@
       <a href="../../introduction/faq/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     FAQ
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -593,9 +657,16 @@
       <a href="../../introduction/stability-support/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Stability and Support
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -614,9 +685,16 @@
       <a href="../../introduction/deprecation-policy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Deprecation Policy
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -649,6 +727,7 @@
       
         
       
+    
     
     
       
@@ -667,9 +746,16 @@
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     API
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -678,7 +764,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            API
+            
+  
+    API
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -692,9 +782,16 @@
       <a href="../../api/components/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Components
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -722,6 +819,9 @@
       
         
       
+        
+      
+    
     
     
       
@@ -740,9 +840,16 @@
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Core Resources
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -751,7 +858,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
-            Core Resources
+            
+  
+    Core Resources
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -765,9 +876,16 @@
       <a href="../../api/externalsecret/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     ExternalSecret
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -786,9 +904,16 @@
       <a href="../../api/secretstore/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     SecretStore
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -807,9 +932,16 @@
       <a href="../../api/clustersecretstore/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     ClusterSecretStore
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -828,9 +960,44 @@
       <a href="../../api/clusterexternalsecret/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     ClusterExternalSecret
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/clusterpushsecret/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ClusterPushSecret
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -849,9 +1016,16 @@
       <a href="../../api/pushsecret/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     PushSecret
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -905,6 +1079,19 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
       
@@ -920,14 +1107,20 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
         
           
-          
           <div class="md-nav__link md-nav__container">
             <a href="../../api/generator/" class="md-nav__link ">
               
   
+  
   <span class="md-ellipsis">
+    
+  
     Generators
+  
+
+    
   </span>
+  
   
 
             </a>
@@ -942,7 +1135,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
-            Generators
+            
+  
+    Generators
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -958,9 +1155,16 @@
       <a href="../../api/generator/acr/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Azure Container Registry
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -979,9 +1183,16 @@
       <a href="../../api/generator/ecr/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     AWS Elastic Container Registry
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1000,9 +1211,44 @@
       <a href="../../api/generator/sts/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     AWS STS Session Token
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/generator/cloudsmith/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloudsmith
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1021,9 +1267,16 @@
       <a href="../../api/generator/cluster/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Cluster Generator
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1042,9 +1295,44 @@
       <a href="../../api/generator/gcr/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Google Container Registry
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/generator/grafana/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grafana
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1063,9 +1351,16 @@
       <a href="../../api/generator/quay/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quay
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1084,9 +1379,44 @@
       <a href="../../api/generator/vault/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Vault Dynamic Secret
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/generator/beyondtrustworkloadcredentials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BeyondTrust Workload Credentials
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1105,9 +1435,16 @@
       <a href="../../api/generator/password/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Password
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1126,9 +1463,16 @@
       <a href="../../api/generator/fake/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Fake
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1147,9 +1491,16 @@
       <a href="../../api/generator/webhook/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Webhook
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1168,9 +1519,44 @@
       <a href="../../api/generator/github/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Github
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/generator/gitlab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gitlab
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1189,9 +1575,72 @@
       <a href="../../api/generator/uuid/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     UUID
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/generator/mfa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MFA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/generator/sshkey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SSHKey
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1223,6 +1672,9 @@
       
         
       
+        
+      
+    
     
     
       
@@ -1241,9 +1693,16 @@
           <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Reference Docs
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1252,7 +1711,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
-            Reference Docs
+            
+  
+    Reference Docs
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1266,9 +1729,16 @@
       <a href="../../api/spec/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     API specification
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1287,9 +1757,16 @@
       <a href="../../api/controller-options/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Controller Options
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1308,9 +1785,44 @@
       <a href="../../api/metrics/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Metrics
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/selectable-fields/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Selectable Fields
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1355,6 +1867,9 @@
       
         
       
+        
+      
+    
     
     
       
@@ -1373,9 +1888,16 @@
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Guides
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1384,7 +1906,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Guides
+            
+  
+    Guides
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1398,9 +1924,16 @@
       <a href="../../guides/introduction/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introduction
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1434,6 +1967,7 @@
       
         
       
+    
     
     
       
@@ -1452,9 +1986,16 @@
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     External Secrets
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1463,7 +2004,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
-            External Secrets
+            
+  
+    External Secrets
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1477,9 +2022,16 @@
       <a href="../../guides/all-keys-one-secret/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Extract structured data
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1498,9 +2050,16 @@
       <a href="../../guides/getallsecrets/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Find Secrets by Name or Metadata
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1519,9 +2078,16 @@
       <a href="../../guides/datafrom-rewrite/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Rewriting Keys
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1543,6 +2109,7 @@
       
         
       
+    
     
     
       
@@ -1561,9 +2128,16 @@
           <label class="md-nav__link" for="__nav_3_2_4" id="__nav_3_2_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Advanced Templating
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1572,7 +2146,11 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2_4">
             <span class="md-nav__icon md-icon"></span>
-            Advanced Templating
+            
+  
+    Advanced Templating
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1586,9 +2164,16 @@
       <a href="../../guides/templating/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     v2
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1607,9 +2192,16 @@
       <a href="../../guides/templating-v1/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     v1
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1636,9 +2228,16 @@
       <a href="../../guides/common-k8s-secret-types/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Kubernetes Secret Types
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1657,9 +2256,16 @@
       <a href="../../guides/ownership-deletion-policy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Lifecycle: ownership & deletion
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1678,9 +2284,16 @@
       <a href="../../guides/decoding-strategy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Decoding Strategies
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1699,9 +2312,16 @@
       <a href="../../guides/controller-class/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Controller Classes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1725,12 +2345,47 @@
   
   
     <li class="md-nav__item">
+      <a href="../../guides/targeting-custom-resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Targeting Custom Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../guides/generator/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Generators
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1749,9 +2404,16 @@
       <a href="../../guides/pushsecrets/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Push Secrets
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1782,183 +2444,6 @@
         
       
     
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Operations
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_5">
-            <span class="md-nav__icon md-icon"></span>
-            Operations
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/multi-tenancy/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Multi Tenancy
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/security-best-practices/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Security Best Practices
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/threat-model/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Threat Model
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/v1beta1/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Upgrading to v1beta1
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/using-latest-image/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Using Latest Image
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../guides/disable-cluster-features/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Disable Cluster Features
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
     
     
       
@@ -1977,9 +2462,16 @@
           <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    Tooling
+    
+  
+    Operations
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1988,7 +2480,243 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_6">
             <span class="md-nav__icon md-icon"></span>
-            Tooling
+            
+  
+    Operations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/multi-tenancy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi Tenancy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/security-best-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Best Practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/threat-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Threat Model
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/v1beta1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Upgrading to v1beta1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/using-latest-image/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using Latest Image
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guides/disable-cluster-features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disable Cluster Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tooling
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tooling
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2002,9 +2730,16 @@
       <a href="../../guides/using-esoctl-tool/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Using the esoctl tool
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2109,6 +2844,31 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
     
     
       
@@ -2128,9 +2888,16 @@
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Provider
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2139,7 +2906,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Provider
+            
+  
+    Provider
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2153,9 +2924,16 @@
       <a href="../aws-secrets-manager/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     AWS Secrets Manager
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2174,9 +2952,72 @@
       <a href="../aws-parameter-store/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     AWS Parameter Store
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aws-certificate-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Certificate Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aws-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AWS Access
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -2202,9 +3043,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     Azure Key Vault
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -2213,9 +3061,16 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Azure Key Vault
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2236,17 +3091,32 @@
         <li class="md-nav__item">
   <a href="#azure-key-vault" class="md-nav__link">
     <span class="md-ellipsis">
-      Azure Key vault
+      
+        Azure Key Vault
+      
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Azure Key vault">
+    <nav class="md-nav" aria-label="Azure Key Vault">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-secretstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure SecretStore
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#authentication" class="md-nav__link">
     <span class="md-ellipsis">
-      Authentication
+      
+        Authentication
+      
     </span>
   </a>
   
@@ -2254,18 +3124,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#service-principal-key-authentication" class="md-nav__link">
+  <a href="#service-principal" class="md-nav__link">
     <span class="md-ellipsis">
-      Service Principal key authentication
+      
+        Service Principal
+      
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#managed-identity-authentication" class="md-nav__link">
+  <a href="#managed-identity-aad-pod-identity" class="md-nav__link">
     <span class="md-ellipsis">
-      Managed Identity authentication
+      
+        Managed Identity (AAD Pod Identity)
+      
     </span>
   </a>
   
@@ -2274,7 +3148,9 @@
           <li class="md-nav__item">
   <a href="#workload-identity" class="md-nav__link">
     <span class="md-ellipsis">
-      Workload Identity
+      
+        Workload Identity
+      
     </span>
   </a>
   
@@ -2284,7 +3160,9 @@
           <li class="md-nav__item">
   <a href="#mounted-service-account" class="md-nav__link">
     <span class="md-ellipsis">
-      Mounted Service Account
+      
+        Mounted Service Account
+      
     </span>
   </a>
   
@@ -2293,7 +3171,9 @@
           <li class="md-nav__item">
   <a href="#referenced-service-account" class="md-nav__link">
     <span class="md-ellipsis">
-      Referenced Service Account
+      
+        Referenced Service Account
+      
     </span>
   </a>
   
@@ -2310,27 +3190,61 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#update-secret-store" class="md-nav__link">
+  <a href="#custom-cloud-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Update secret store
+      
+        Custom Cloud Configuration
+      
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Custom Cloud Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-china-workload-identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure China Workload Identity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-stack-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure Stack Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#object-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Object Types
+      
+        Object Types
+      
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#creating-external-secret" class="md-nav__link">
+  <a href="#creating-an-externalsecret" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating external secret
+      
+        Creating an ExternalSecret
+      
     </span>
   </a>
   
@@ -2339,7 +3253,9 @@
           <li class="md-nav__item">
   <a href="#creating-a-pushsecret" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a PushSecret
+      
+        Creating a PushSecret
+      
     </span>
   </a>
   
@@ -2349,7 +3265,9 @@
           <li class="md-nav__item">
   <a href="#pushing-to-a-secret" class="md-nav__link">
     <span class="md-ellipsis">
-      Pushing to a Secret
+      
+        Pushing to a Secret
+      
     </span>
   </a>
   
@@ -2358,7 +3276,9 @@
           <li class="md-nav__item">
   <a href="#pushing-to-a-key" class="md-nav__link">
     <span class="md-ellipsis">
-      Pushing to a Key
+      
+        Pushing to a Key
+      
     </span>
   </a>
   
@@ -2367,7 +3287,9 @@
           <li class="md-nav__item">
   <a href="#pushing-to-a-certificate" class="md-nav__link">
     <span class="md-ellipsis">
-      Pushing to a Certificate
+      
+        Pushing to a Certificate
+      
     </span>
   </a>
   
@@ -2399,12 +3321,75 @@
   
   
     <li class="md-nav__item">
+      <a href="../barbican/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Barbican
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../beyondtrust/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     BeyondTrust
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../beyondtrustworkloadcredentials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BeyondTrust Workload Credentials
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -2423,9 +3408,16 @@
       <a href="../bitwarden-secrets-manager/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Bitwarden Secrets Manager
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2444,9 +3436,44 @@
       <a href="../chef/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Chef
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloudru/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloud.ru Secret Manager
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -2465,30 +3492,16 @@
       <a href="../conjur/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     CyberArk Conjur
-  </span>
   
 
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../device42/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Device42
+    
   </span>
+  
   
 
       </a>
@@ -2507,9 +3520,16 @@
       <a href="../google-secrets-manager/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Google Cloud Secret Manager
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2528,9 +3548,16 @@
       <a href="../hashicorp-vault/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     HashiCorp Vault
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2549,9 +3576,44 @@
       <a href="../kubernetes/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Kubernetes
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kubernetes CRD
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -2570,9 +3632,16 @@
       <a href="../ibm-secrets-manager/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     IBM Secrets Manager
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2591,9 +3660,16 @@
       <a href="../akeyless/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Akeyless
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2612,9 +3688,16 @@
       <a href="../yandex-certificate-manager/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Yandex Certificate Manager
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2633,30 +3716,16 @@
       <a href="../yandex-lockbox/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Yandex Lockbox
-  </span>
   
 
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../alibaba/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Alibaba Cloud
+    
   </span>
+  
   
 
       </a>
@@ -2675,9 +3744,44 @@
       <a href="../gitlab-variables/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     GitLab Variables
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../github/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Github Actions Secrets
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -2696,9 +3800,44 @@
       <a href="../oracle-vault/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Oracle Vault
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ovhcloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OVHcloud
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -2717,9 +3856,44 @@
       <a href="../1password-automation/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    1Password Secrets Automation
+    
+  
+    1Password Connect Server
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1password-sdk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1Password SDK
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -2738,9 +3912,16 @@
       <a href="../webhook/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Webhook
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2759,9 +3940,16 @@
       <a href="../fake/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Fake
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2780,9 +3968,16 @@
       <a href="../senhasegura-dsm/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     senhasegura DevOps Secrets Management (DSM)
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2801,9 +3996,16 @@
       <a href="../doppler/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Doppler
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2822,9 +4024,16 @@
       <a href="../keeper-security/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Keeper Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2843,9 +4052,16 @@
       <a href="../cloak/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Cloak End 2 End Encrypted Secrets
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2864,9 +4080,16 @@
       <a href="../scaleway/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Scaleway
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2885,9 +4108,16 @@
       <a href="../delinea/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Delinea
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2906,9 +4136,16 @@
       <a href="../secretserver/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Secret Server
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2927,9 +4164,16 @@
       <a href="../passbolt/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Passbolt
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2948,9 +4192,16 @@
       <a href="../pulumi/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Pulumi ESC
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2969,9 +4220,16 @@
       <a href="../onboardbase/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Onboardbase
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2990,9 +4248,16 @@
       <a href="../../provider-passworddepot/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Password Depot
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3011,9 +4276,16 @@
       <a href="../fortanix/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Fortanix
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3032,9 +4304,16 @@
       <a href="../infisical/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Infisical
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3053,9 +4332,156 @@
       <a href="../previder/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Previder
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../openbao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenBao
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../volcengine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Volcengine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ngrok/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ngrok
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devolutions-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Devolutions Server
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nebius-mysterybox/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nebius MysteryBox
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -3088,6 +4514,7 @@
       
         
       
+    
     
     
       
@@ -3106,9 +4533,16 @@
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Examples
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3117,7 +4551,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Examples
+            
+  
+    Examples
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3131,9 +4569,16 @@
       <a href="../../examples/gitops-using-fluxcd/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     FluxCD
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3152,9 +4597,16 @@
       <a href="../../examples/anchore-engine-credentials/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Anchore Engine
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3173,9 +4625,16 @@
       <a href="../../examples/jenkins-kubernetes-credentials/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Jenkins
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3194,9 +4653,16 @@
       <a href="../../examples/bitwarden/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    BitWarden
+    
+  
+    Bitwarden
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3225,6 +4691,7 @@
       
         
       
+    
     
     
       
@@ -3243,9 +4710,16 @@
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Community
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3254,7 +4728,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            Community
+            
+  
+    Community
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3277,6 +4755,13 @@
       
         
       
+        
+      
+        
+      
+        
+      
+    
     
     
       
@@ -3295,9 +4780,16 @@
           <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Contributing
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3306,7 +4798,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_1">
             <span class="md-nav__icon md-icon"></span>
-            Contributing
+            
+  
+    Contributing
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3320,9 +4816,16 @@
       <a href="../../contributing/devguide/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Developer guide
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3341,9 +4844,16 @@
       <a href="../../contributing/process/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Contributing Process
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3362,9 +4872,16 @@
       <a href="../../contributing/release/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Release Process
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3383,9 +4900,44 @@
       <a href="../../contributing/coc/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Code of Conduct
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/calendar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Community meetings calendar
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -3404,9 +4956,72 @@
       <a href="../../contributing/roadmap/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Roadmap
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/burnout-mitigation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Burnout Prevention
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/llm-policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM Policy
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -3442,6 +5057,7 @@
       
     
     
+    
       
       
     
@@ -3458,9 +5074,16 @@
           <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     External Resources
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3469,7 +5092,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6_2">
             <span class="md-nav__icon md-icon"></span>
-            External Resources
+            
+  
+    External Resources
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3483,9 +5110,16 @@
       <a href="../../eso-talks/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Talks
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3504,9 +5138,16 @@
       <a href="../../eso-demos/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Demos
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3525,9 +5166,16 @@
       <a href="../../eso-blogs/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Blogs
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3546,9 +5194,16 @@
       <a href="../../eso-tools/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Tools
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3599,17 +5254,32 @@
         <li class="md-nav__item">
   <a href="#azure-key-vault" class="md-nav__link">
     <span class="md-ellipsis">
-      Azure Key vault
+      
+        Azure Key Vault
+      
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Azure Key vault">
+    <nav class="md-nav" aria-label="Azure Key Vault">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-secretstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure SecretStore
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#authentication" class="md-nav__link">
     <span class="md-ellipsis">
-      Authentication
+      
+        Authentication
+      
     </span>
   </a>
   
@@ -3617,18 +5287,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#service-principal-key-authentication" class="md-nav__link">
+  <a href="#service-principal" class="md-nav__link">
     <span class="md-ellipsis">
-      Service Principal key authentication
+      
+        Service Principal
+      
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#managed-identity-authentication" class="md-nav__link">
+  <a href="#managed-identity-aad-pod-identity" class="md-nav__link">
     <span class="md-ellipsis">
-      Managed Identity authentication
+      
+        Managed Identity (AAD Pod Identity)
+      
     </span>
   </a>
   
@@ -3637,7 +5311,9 @@
           <li class="md-nav__item">
   <a href="#workload-identity" class="md-nav__link">
     <span class="md-ellipsis">
-      Workload Identity
+      
+        Workload Identity
+      
     </span>
   </a>
   
@@ -3647,7 +5323,9 @@
           <li class="md-nav__item">
   <a href="#mounted-service-account" class="md-nav__link">
     <span class="md-ellipsis">
-      Mounted Service Account
+      
+        Mounted Service Account
+      
     </span>
   </a>
   
@@ -3656,7 +5334,9 @@
           <li class="md-nav__item">
   <a href="#referenced-service-account" class="md-nav__link">
     <span class="md-ellipsis">
-      Referenced Service Account
+      
+        Referenced Service Account
+      
     </span>
   </a>
   
@@ -3673,27 +5353,61 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#update-secret-store" class="md-nav__link">
+  <a href="#custom-cloud-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Update secret store
+      
+        Custom Cloud Configuration
+      
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Custom Cloud Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-china-workload-identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure China Workload Identity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#azure-stack-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Azure Stack Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#object-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Object Types
+      
+        Object Types
+      
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#creating-external-secret" class="md-nav__link">
+  <a href="#creating-an-externalsecret" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating external secret
+      
+        Creating an ExternalSecret
+      
     </span>
   </a>
   
@@ -3702,7 +5416,9 @@
           <li class="md-nav__item">
   <a href="#creating-a-pushsecret" class="md-nav__link">
     <span class="md-ellipsis">
-      Creating a PushSecret
+      
+        Creating a PushSecret
+      
     </span>
   </a>
   
@@ -3712,7 +5428,9 @@
           <li class="md-nav__item">
   <a href="#pushing-to-a-secret" class="md-nav__link">
     <span class="md-ellipsis">
-      Pushing to a Secret
+      
+        Pushing to a Secret
+      
     </span>
   </a>
   
@@ -3721,7 +5439,9 @@
           <li class="md-nav__item">
   <a href="#pushing-to-a-key" class="md-nav__link">
     <span class="md-ellipsis">
-      Pushing to a Key
+      
+        Pushing to a Key
+      
     </span>
   </a>
   
@@ -3730,7 +5450,9 @@
           <li class="md-nav__item">
   <a href="#pushing-to-a-certificate" class="md-nav__link">
     <span class="md-ellipsis">
-      Pushing to a Certificate
+      
+        Pushing to a Certificate
+      
     </span>
   </a>
   
@@ -3756,9 +5478,11 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+
 
   
   
@@ -3767,49 +5491,113 @@
   <h1>Azure Key Vault</h1>
 
 <p><img alt="aws sm" src="../../pictures/eso-az-kv-azure-kv.png" /></p>
-<h2 id="azure-key-vault">Azure Key vault</h2>
-<p>External Secrets Operator integrates with <a href="https://azure.microsoft.com/en-us/services/key-vault/">Azure Key vault</a> for secrets, certificates and Keys management.</p>
-<h3 id="authentication">Authentication</h3>
-<p>We support authentication with Microsoft Entra identities that can be used as Workload Identity or <a href="https://azure.github.io/aad-pod-identity/docs/">AAD Pod Identity</a> as well as with Service Principal credentials.</p>
-<p>Since the <a href="https://azure.github.io/aad-pod-identity/docs/">AAD Pod Identity</a> is deprecated, it is recommended to use the <a href="https://azure.github.io/azure-workload-identity">Workload Identity</a> authentication.</p>
-<p>We support connecting to different cloud flavours azure supports: <code>PublicCloud</code>, <code>USGovernmentCloud</code>, <code>ChinaCloud</code> and <code>GermanCloud</code>. You have to specify the <code>environmentType</code> and point to the correct cloud flavour. This defaults to <code>PublicCloud</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1beta1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-backend</span>
-<span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">provider</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">azurekv</span><span class="p">:</span>
-<span class="w">      </span><span class="c1"># PublicCloud, USGovernmentCloud, ChinaCloud, GermanCloud</span>
-<span class="w">      </span><span class="nt">environmentType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PublicCloud</span><span class="w"> </span><span class="c1"># default</span>
-</code></pre></div>
-<p>Minimum required permissions are <code>Get</code> over secret and certificate permissions. This can be done by adding a Key Vault access policy:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">KUBELET_IDENTITY_OBJECT_ID</span><span class="o">=</span><span class="k">$(</span>az<span class="w"> </span>aks<span class="w"> </span>show<span class="w"> </span>--resource-group<span class="w"> </span>&lt;AKS_CLUSTER_RG_NAME&gt;<span class="w"> </span>--name<span class="w"> </span>&lt;AKS_CLUSTER_NAME&gt;<span class="w"> </span>--query<span class="w"> </span><span class="s1">&#39;identityProfile.kubeletidentity.objectId&#39;</span><span class="w"> </span>-o<span class="w"> </span>tsv<span class="k">)</span>
-az<span class="w"> </span>keyvault<span class="w"> </span>set-policy<span class="w"> </span>--name<span class="w"> </span>kv-name-with-certs<span class="w"> </span>--object-id<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$KUBELET_IDENTITY_OBJECT_ID</span><span class="s2">&quot;</span><span class="w"> </span>--certificate-permissions<span class="w"> </span>get<span class="w"> </span>--secret-permissions<span class="w"> </span>get
-</code></pre></div>
-<h4 id="service-principal-key-authentication">Service Principal key authentication</h4>
-<p>A service Principal client and Secret is created and the JSON keyfile is stored in a <code>Kind=Secret</code>. The <code>ClientID</code> and <code>ClientSecret</code> or <code>ClientCertificate</code> (in PEM format) should be configured for the secret. This service principal should have proper access rights to the keyvault to be managed by the operator.</p>
-<h4 id="managed-identity-authentication">Managed Identity authentication</h4>
-<p>A Managed Identity should be created in Azure, and that Identity should have proper rights to the keyvault to be managed by the operator.</p>
-<p>Use <a href="https://azure.github.io/aad-pod-identity/docs/">aad-pod-identity</a> to assign the identity to external-secrets operator. To add the selector to external-secrets operator, use <code>podLabels</code> in your values.yaml in case of Helm installation of external-secrets.</p>
-<p>If there are multiple Managed Identities for different keyvaults, the operator should have been assigned all identities via <a href="https://azure.github.io/aad-pod-identity/docs/">aad-pod-identity</a>, then the SecretStore configuration should include the Id of the identity to be used via the <code>identityId</code> field.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1beta1</span>
+<h2 id="azure-key-vault">Azure Key Vault</h2>
+<p>External Secrets Operator integrates with <a href="https://azure.microsoft.com/en-us/services/key-vault/">Azure Key Vault</a> via <code>SecretStore</code> and <code>ClusterSecretStore</code> resources. The operator can fetch secrets, keys and certificates stored in Azure Key Vault and synchronize them as Kubernetes secrets using an <code>ExternalSecret</code>. Vice versa, it can also push secrets from Kubernetes into Azure Key Vault as secrets, keys and certificates by using a <code>PushSecret</code>.</p>
+<p>ESO supports connecting to different cloud flavours azure supports: <code>PublicCloud</code>, <code>USGovernmentCloud</code>, <code>ChinaCloud</code>, <code>GermanCloud</code> and <code>AzureStackCloud</code> (for Azure Stack Hub/Edge). You have to specify the <code>environmentType</code> and point to the correct cloud flavour. This defaults to <code>PublicCloud</code>.</p>
+<p>For environments with non-standard endpoints (Azure Stack, Azure China with AKS Workload Identity, etc.), you can provide custom cloud configuration to override the default endpoints. See the <a href="#custom-cloud-configuration">Custom Cloud Configuration</a> section below.</p>
+<h3 id="configure-secretstore">Configure SecretStore</h3>
+<p>The Azure Key Vault provider is fully compatible with both namespaced <code>SecretStore</code> and cluster-wide <code>ClusterSecretStore</code> resources. For simplicity, this article refers only to <code>SecretStore</code>, but the same is applicable also for <code>ClusterSecretStore</code>. To establish the integration with Azure Key Vault, specify <code>azurekv</code> as the provider and provide the vault URL and authentication details. The vault URL is the URL of your Key Vault instance, which typically looks like <code>https://&lt;your-keyvault-name&gt;.vault.azure.net</code>. For Azure Stack, it may have a different format, so make sure to use the correct URL for your environment. See below for different authentication methods.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-store</span>
 <span class="nt">spec</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">provider</span><span class="p">:</span>
-<span class="w">    </span><span class="c1"># provider type: azure keyvault</span>
+<span class="w">    </span><span class="nt">azurekv</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># URL of your Key Vault instance, see: https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates</span>
+<span class="w">      </span><span class="nt">vaultUrl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://xx-xxxx-xx.vault.azure.net&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterSecretStore</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-store</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">provider</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">azurekv</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># URL of your Key Vault instance, see: https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates</span>
+<span class="w">      </span><span class="nt">vaultUrl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://xx-xxxx-xx.vault.azure.net&quot;</span>
+</code></pre></div>
+<h3 id="authentication">Authentication</h3>
+<p>ESO supports multiple authentication methods to connect to Azure Key Vault:</p>
+<ul>
+<li>Service Principal</li>
+<li>Managed Identity (AAD Pod Identity)</li>
+<li>Workload Identity</li>
+</ul>
+<p>Regardless of which authentication method is used to authenticate to Azure Key Vault, the identity which is assigned to External Secrets Operator needs to have proper permissions to access the Key Vault. Both <a href="https://learn.microsoft.com/en-us/azure/key-vault/general/rbac-guide">RBAC</a> and legacy <a href="https://learn.microsoft.com/en-us/azure/key-vault/general/assign-access-policy">Access Policy</a> based Key Vaults are supported.</p>
+<p>The required permissions depend on the type of objects you want to manage (secrets, keys, certificates) and the operations you want to perform (read, write, delete, etc.). For example, to grant External Secrets Operator permissions to synchronize secrets and certificates using an <code>ExternalSecret</code>, the minimum required permissions are either the <a href="https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/security#key-vault-secrets-user">Key Vault Secrets User</a> and <a href="https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/security#key-vault-certificate-user">Key Vault Certificate User</a> RBAC roles, or alternatively for Access Policy based Key Vaults, the <code>Get</code> permission over secrets and certificates.</p>
+<h4 id="service-principal">Service Principal</h4>
+<p>To use a Service Principal's credentials for authentication, you need to create a Service Principal in Entra ID and grant it the necessary permissions to access the Key Vault. Then, you can create a Kubernetes Secret containing the Service Principal's credentials:</p>
+<ul>
+<li>Client ID</li>
+<li><strong>Either</strong> Client Secret <strong>or</strong> Client Certificate (in PEM format)</li>
+</ul>
+<p>Reference this secret in your <code>SecretStore</code> configuration.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-store-spn-secret</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">provider</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">azurekv</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># Azure tenant ID, see: https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant</span>
+<span class="w">      </span><span class="nt">tenantId</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2ed1d494-6c5a-4c5d-aa24-479446fb844d&quot;</span>
+<span class="w">      </span><span class="c1"># URL of your Key Vault instance, see: https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates</span>
+<span class="w">      </span><span class="nt">vaultUrl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://kvtestpushsecret.vault.azure.net&quot;</span>
+<span class="w">      </span><span class="nt">authSecretRef</span><span class="p">:</span>
+<span class="w">        </span><span class="c1"># Reference to Kubernetes Secret name containing the Service Principal client ID under the key `ClientID`</span>
+<span class="w">        </span><span class="nt">clientId</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-secret-sp</span>
+<span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClientID</span>
+<span class="w">        </span><span class="c1"># Reference to Kubernetes Secret name containing the Service Principal client secret under the key `ClientSecret`</span>
+<span class="w">        </span><span class="nt">clientSecret</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-secret-sp</span>
+<span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClientSecret</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-store-spn-certificate</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">provider</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">azurekv</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># Azure tenant ID, see: https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant</span>
+<span class="w">      </span><span class="nt">tenantId</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2ed1d494-6c5a-4c5d-aa24-479446fb844d&quot;</span>
+<span class="w">      </span><span class="c1"># URL of your Key Vault instance, see: https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates</span>
+<span class="w">      </span><span class="nt">vaultUrl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://kvtestpushsecret.vault.azure.net&quot;</span>
+<span class="w">      </span><span class="nt">authSecretRef</span><span class="p">:</span>
+<span class="w">        </span><span class="c1"># Reference to Kubernetes Secret name containing the Service Principal client ID under the key `ClientID`</span>
+<span class="w">        </span><span class="nt">clientId</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-secret-sp</span>
+<span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClientID</span>
+<span class="w">        </span><span class="c1"># Reference to Kubernetes Secret name containing the Service Principal client certificate in PEM format under the key `ClientCertificate`</span>
+<span class="w">        </span><span class="nt">clientCertificate</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-secret-sp</span>
+<span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClientCertificate</span>
+</code></pre></div>
+<h4 id="managed-identity-aad-pod-identity">Managed Identity (AAD Pod Identity)</h4>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This authentication option uses <a href="https://azure.github.io/aad-pod-identity/docs/">AAD Pod Identity</a> which is deprecated, it is recommended to use the <a href="https://azure.github.io/azure-workload-identity">Workload Identity</a> authentication instead.</p>
+</div>
+<p>To use a Managed Identity with AAD Pod Identity for authentication, you need to create a Managed Identity in Azure and grant it the necessary permissions to access the Key Vault. Then, assign that Managed Identity to the External Secrets Operator using <a href="https://azure.github.io/aad-pod-identity/docs/">AAD Pod Identity</a>. Finally, you can reference that identity in your <code>SecretStore</code> configuration.</p>
+<p>If you have multiple identities assigned to External Secrets Operator, you can specify which of them to use by providing its client ID in the field <code>spec.provider.azurekv.identityId</code> on the <code>SecretStore</code>. If only one identity is assigned, you can omit the <code>identityId</code> field.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-store</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">provider</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">azurekv</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">authType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ManagedIdentity</span>
-<span class="w">      </span><span class="c1"># Optionally set the Id of the Managed Identity, if multiple identities are assigned to external-secrets operator</span>
-<span class="w">      </span><span class="nt">identityId</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;MI_clientId&gt;&quot;</span>
-<span class="w">      </span><span class="c1"># URL of your vault instance, see: https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates</span>
+<span class="w">      </span><span class="c1"># Optionally set the ID of the Managed Identity, if multiple identities are assigned to External Secrets Operator.</span>
+<span class="w">      </span><span class="nt">identityId</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;00000000-0000-0000-0000-000000000000&quot;</span>
+<span class="w">      </span><span class="c1"># URL of your Key Vault instance, see: https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates</span>
 <span class="w">      </span><span class="nt">vaultUrl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://my-keyvault-name.vault.azure.net&quot;</span>
 </code></pre></div>
 <h4 id="workload-identity">Workload Identity</h4>
-<p>In Microsoft Entra, Workload Identity can be Application, user-assigned Managed Identity and Service Principal.</p>
-<p>You can use <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/workload-identity-federation">Azure AD Workload Identity Federation</a> to access Azure managed services like Key Vault <strong>without needing to manage secrets</strong>. You need to configure a trust relationship between your Kubernetes Cluster and Azure AD. This can be done in various ways, for instance using <code>terraform</code>, the Azure Portal or the <code>az</code> cli. We found the <a href="https://azure.github.io/azure-workload-identity/docs/installation/azwi.html">azwi</a> cli very helpful. The Azure <a href="https://azure.github.io/azure-workload-identity/docs/quick-start.html">Workload Identity Quick Start Guide</a> is also good place to get started.</p>
+<p>Workload Identity is the recommended authentication method for Azure Key Vault. It allows the External Secrets Operator to authenticate to Azure Key Vault using the identity of a Kubernetes Service Account, without needing to manage secrets or credentials. This is achieved by creating a trust relationship between your Kubernetes cluster and the Entra ID identity you want to use. This process is known as <a href="https://learn.microsoft.com/en-us/entra/workload-id/workload-identity-federation">Workload Identity Federation</a>. The identity in Entra ID can be either an Application, a user-assigned Managed Identity or a Service Principal.</p>
+<p>The workload identity federation can be done in various ways, for instance using Terraform, the Azure Portal or Azure CLI. We found the <a href="https://azure.github.io/azure-workload-identity/docs/installation/azwi.html">azwi</a> CLI very helpful. The Azure <a href="https://azure.github.io/azure-workload-identity/docs/quick-start.html">Workload Identity Quick Start Guide</a> is a good place to get started.</p>
 <p>This is basically a two step process:</p>
 <ol>
 <li>Create a Kubernetes Service Account (<a href="https://azure.github.io/azure-workload-identity/docs/quick-start.html#5-create-a-kubernetes-service-account">guide</a>)</li>
@@ -3826,19 +5614,19 @@ az<span class="w"> </span>keyvault<span class="w"> </span>set-policy<span class=
 <span class="w">  </span>--service-account-name<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SERVICE_ACCOUNT_NAME</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--service-account-issuer-url<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SERVICE_ACCOUNT_ISSUER</span><span class="si">}</span><span class="s2">&quot;</span>
 </code></pre></div>
-<p>With these prerequisites met you can configure <code>ESO</code> to use that Service Account. You have two options:</p>
+<p>With these prerequisites met you can configure External Secrets Operator to use that Service Account. You have two options:</p>
 <h5 id="mounted-service-account">Mounted Service Account</h5>
 <p>You run the controller and mount that particular service account into the pod by adding the label <code>azure.workload.identity/use: "true"</code>to the pod. That grants <em>everyone</em> who is able to create a secret store or reference a correctly configured one the ability to read secrets. <strong>This approach is usually not recommended</strong>. But may make sense when you want to share an identity with multiple namespaces. Also see our <a href="../../guides/multi-tenancy/">Multi-Tenancy Guide</a> for design considerations.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ServiceAccount</span>
 <span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="c1"># this service account was created by azwi</span>
+<span class="w">  </span><span class="c1"># This service account was created by azwi</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">workload-identity-sa</span>
 <span class="w">  </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">azure.workload.identity/client-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7d8cdf74-xxxx-xxxx-xxxx-274d963d358b</span>
 <span class="w">    </span><span class="nt">azure.workload.identity/tenant-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5a02a20e-xxxx-xxxx-xxxx-0ad5b634c5d8</span>
 <span class="nn">---</span>
-<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1beta1</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-store</span>
@@ -3847,7 +5635,7 @@ az<span class="w"> </span>keyvault<span class="w"> </span>set-policy<span class=
 <span class="w">    </span><span class="nt">azurekv</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">authType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WorkloadIdentity</span>
 <span class="w">      </span><span class="nt">vaultUrl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://xx-xxxx-xx.vault.azure.net&quot;</span>
-<span class="w">      </span><span class="c1"># note: no serviceAccountRef was provided</span>
+<span class="w">      </span><span class="c1"># Note: no serviceAccountRef was provided</span>
 </code></pre></div>
 <h5 id="referenced-service-account">Referenced Service Account</h5>
 <p>You run the controller without service account (effectively without azure permissions). Now you have to configure the SecretStore and set the <code>serviceAccountRef</code> and point to the service account you have just created. <strong>This is usually the recommended approach</strong>. It makes sense for everyone who wants to run the controller without Azure permissions and delegate authentication via service accounts in particular namespaces. Also see our <a href="../../guides/multi-tenancy/">Multi-Tenancy Guide</a> for design considerations.</p>
@@ -3860,7 +5648,7 @@ az<span class="w"> </span>keyvault<span class="w"> </span>set-policy<span class=
 <span class="w">    </span><span class="nt">azure.workload.identity/client-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">7d8cdf74-xxxx-xxxx-xxxx-274d963d358b</span>
 <span class="w">    </span><span class="nt">azure.workload.identity/tenant-id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5a02a20e-xxxx-xxxx-xxxx-0ad5b634c5d8</span>
 <span class="nn">---</span>
-<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1beta1</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-store</span>
@@ -3877,11 +5665,11 @@ az<span class="w"> </span>keyvault<span class="w"> </span>set-policy<span class=
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ServiceAccount</span>
 <span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="c1"># this service account was created by azwi</span>
+<span class="w">  </span><span class="c1"># This service account was created by azwi</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">workload-identity-sa</span>
 <span class="w">  </span><span class="nt">annotations</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 <span class="nn">---</span>
-<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1beta1</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-store</span>
@@ -3903,79 +5691,109 @@ az<span class="w"> </span>keyvault<span class="w"> </span>set-policy<span class=
 <span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">umi-secret</span>
 <span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tenantId</span>
 </code></pre></div>
-<h3 id="update-secret-store">Update secret store</h3>
-<p>Be sure the <code>azurekv</code> provider is listed in the <code>Kind=SecretStore</code></p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1beta1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
+<h3 id="custom-cloud-configuration">Custom Cloud Configuration</h3>
+<p>External Secrets Operator supports custom cloud endpoints for Azure Stack Hub, Azure Stack Edge, and other scenarios where the default cloud endpoints don't match your environment. This feature requires using the new Azure SDK.</p>
+<h4 id="azure-china-workload-identity">Azure China Workload Identity</h4>
+<p>Azure China's AKS uses a different OIDC issuer (<code>login.partner.microsoftonline.cn</code>) than the standard China Cloud endpoint (<code>login.chinacloudapi.cn</code>). When using Workload Identity with AKS in Azure China, you need to override the Active Directory endpoint:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterSecretStore</span>
 <span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-store</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-china-workload-identity</span>
 <span class="nt">spec</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">provider</span><span class="p">:</span>
-<span class="w">    </span><span class="c1"># provider type: azure keyvault</span>
 <span class="w">    </span><span class="nt">azurekv</span><span class="p">:</span>
-<span class="w">      </span><span class="c1"># azure tenant ID, see: https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant</span>
-<span class="w">      </span><span class="nt">tenantId</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2ed1d494-6c5a-4c5d-aa24-479446fb844d&quot;</span>
-<span class="w">      </span><span class="c1"># URL of your vault instance, see: https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates</span>
-<span class="w">      </span><span class="nt">vaultUrl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://kvtestpushsecret.vault.azure.net&quot;</span>
+<span class="w">      </span><span class="nt">vaultUrl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://my-vault.vault.azure.cn&quot;</span>
+<span class="w">      </span><span class="nt">environmentType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ChinaCloud</span>
+<span class="w">      </span><span class="nt">authType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WorkloadIdentity</span>
+<span class="w">      </span><span class="c1"># REQUIRED: Must be true to use custom cloud configuration</span>
+<span class="w">      </span><span class="nt">useAzureSDK</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="c1"># Override the Active Directory endpoint to match AKS OIDC issuer</span>
+<span class="w">      </span><span class="nt">customCloudConfig</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">activeDirectoryEndpoint</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://login.partner.microsoftonline.cn/&quot;</span>
+<span class="w">        </span><span class="nt">keyVaultEndpoint</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://vault.azure.cn/&quot;</span>
+<span class="w">        </span><span class="nt">resourceManagerEndpoint</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://management.chinacloudapi.cn/&quot;</span>
+<span class="w">      </span><span class="nt">serviceAccountRef</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-service-account</span>
+<span class="w">        </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+</code></pre></div>
+<h4 id="azure-stack-configuration">Azure Stack Configuration</h4>
+<p>For Azure Stack Hub or Azure Stack Edge environments:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-stack-backend</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">provider</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">azurekv</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">vaultUrl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://my-vault.vault.local.azurestack.external/&quot;</span>
+<span class="w">      </span><span class="c1"># REQUIRED: Must be set to AzureStackCloud for custom environments</span>
+<span class="w">      </span><span class="nt">environmentType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AzureStackCloud</span>
+<span class="w">      </span><span class="c1"># REQUIRED: Must be true for Azure Stack (legacy SDK doesn&#39;t support custom clouds)</span>
+<span class="w">      </span><span class="nt">useAzureSDK</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="c1"># REQUIRED: Custom cloud endpoints for your Azure Stack deployment</span>
+<span class="w">      </span><span class="nt">customCloudConfig</span><span class="p">:</span>
+<span class="w">        </span><span class="c1"># Azure Active Directory endpoint for authentication</span>
+<span class="w">        </span><span class="nt">activeDirectoryEndpoint</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://login.microsoftonline.com/&quot;</span>
+<span class="w">        </span><span class="c1"># Optional: Key Vault endpoint if different from vaultUrl domain</span>
+<span class="w">        </span><span class="nt">keyVaultEndpoint</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://vault.local.azurestack.external/&quot;</span>
+<span class="w">        </span><span class="c1"># Optional: Resource Manager endpoint for resource operations</span>
+<span class="w">        </span><span class="nt">resourceManagerEndpoint</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://management.local.azurestack.external/&quot;</span>
+<span class="w">      </span><span class="c1"># ... rest of authentication configuration (Service Principal example)</span>
+<span class="w">      </span><span class="nt">authType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ServicePrincipal</span>
+<span class="w">      </span><span class="nt">tenantId</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;your-tenant-id&quot;</span>
 <span class="w">      </span><span class="nt">authSecretRef</span><span class="p">:</span>
-<span class="w">        </span><span class="c1"># points to the secret that contains</span>
-<span class="w">        </span><span class="c1"># the azure service principal credentials</span>
 <span class="w">        </span><span class="nt">clientId</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-secret-sp</span>
-<span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClientID</span>
+<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-secret</span>
+<span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">client-id</span>
 <span class="w">        </span><span class="nt">clientSecret</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-secret-sp</span>
-<span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClientSecret</span>
+<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-secret</span>
+<span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">client-secret</span>
 </code></pre></div>
-<strong>NOTE:</strong> In case of a <code>ClusterSecretStore</code>, Be sure to provide <code>namespace</code> in <code>clientId</code> and <code>clientSecret</code>  with the namespaces where the secrets reside.</p>
-<p>Or in case of Managed Identity authentication:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1beta1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-store</span>
-<span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">provider</span><span class="p">:</span>
-<span class="w">    </span><span class="c1"># provider type: azure keyvault</span>
-<span class="w">    </span><span class="nt">azurekv</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">authType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ManagedIdentity</span>
-<span class="w">      </span><span class="c1"># Optionally set the Id of the Managed Identity, if multiple identities are assigned to external-secrets operator</span>
-<span class="w">      </span><span class="nt">identityId</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;MI_clientId&gt;&quot;</span>
-<span class="w">      </span><span class="c1"># URL of your vault instance, see: https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates</span>
-<span class="w">      </span><span class="nt">vaultUrl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://my-keyvault-name.vault.azure.net&quot;</span>
-</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li><code>useAzureSDK: true</code> is mandatory when using <code>customCloudConfig</code></li>
+<li><code>customCloudConfig</code> can be used with any <code>environmentType</code> (PublicCloud, ChinaCloud, etc.)</li>
+<li>For AzureStackCloud, <code>customCloudConfig</code> is required</li>
+<li>Contact your Azure Stack administrator for the correct endpoint URLs</li>
+</ul>
+</div>
 <h3 id="object-types">Object Types</h3>
-<p>Azure Key Vault manages different <a href="https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates#object-types">object types</a>, we support <code>keys</code>, <code>secrets</code> and <code>certificates</code>. Simply prefix the key with <code>key</code>, <code>secret</code> or <code>cert</code> to retrieve the desired type (defaults to secret).</p>
+<p>Azure Key Vault has different <a href="https://docs.microsoft.com/en-us/azure/key-vault/general/about-keys-secrets-certificates#object-types">object types</a>; Secrets, Keys and Certificates, all of which are supported. To explicitly select which object type to fetch via an <code>ExternalSecret</code> or push via a <code>PushSecret</code>, prefix the <code>spec.data[].remoteRef.key</code> field with either <code>key</code>, <code>secret</code> or <code>cert</code>. If no prefix is provided, the operator defaults to <code>secret</code>.</p>
 <table>
 <thead>
 <tr>
 <th>Object Type</th>
-<th>Return Value</th>
+<th>Prefix</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>secret</code></td>
-<td>the raw secret value.</td>
+<td>Secret</td>
+<td><code>secret</code> (default)</td>
+<td>Generic secrets, such as passwords and database connection strings.</td>
 </tr>
 <tr>
+<td>Key</td>
 <td><code>key</code></td>
-<td>A JWK which contains the public key. Azure Key Vault does <strong>not</strong> export the private key. You may want to use <a href="../../guides/templating/">template functions</a> to transform this JWK into PEM encoded PKIX ASN.1 DER format.</td>
+<td>Cryptographic keys represented as JSON Web Key [JWK] objects. Azure Key Vault does <strong>not</strong> export the private key. You may want to use <a href="../../guides/templating/">template functions</a> to transform this JWK into PEM encoded PKIX ASN.1 DER format.</td>
 </tr>
 <tr>
-<td><code>certificate</code></td>
-<td>The raw CER contents of the x509 certificate. You may want to use <a href="../../guides/templating/">template functions</a> to transform this into your desired encoding</td>
+<td>Certificate</td>
+<td><code>cert</code></td>
+<td>X509 certificates, for example TLS certificates. You may want to use <a href="../../guides/templating/">template functions</a> to transform this into your desired encoding.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="creating-external-secret">Creating external secret</h3>
-<p>To create a Kubernetes secret from the Azure Key vault secret a <code>Kind=ExternalSecret</code> is needed.</p>
-<p>You can manage keys/secrets/certificates saved inside the keyvault , by setting a "/" prefixed type in the secret name, the default type is a <code>secret</code>. Other supported values are <code>cert</code> and <code>key</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1beta1</span>
+<h3 id="creating-an-externalsecret">Creating an ExternalSecret</h3>
+<p>To synchronize secrets from Azure Key Vault into Kubernetes, you need to create an <code>ExternalSecret</code> which references the <code>SecretStore</code> or <code>ClusterSecretStore</code> you configured. You specify the name of the secret in Azure Key Vault that you want to synchronize and the name of the Kubernetes secret that should be created.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ExternalSecret</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">database-credentials</span>
 <span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">refreshInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span>
+<span class="w">  </span><span class="nt">refreshInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h0m0s</span>
 <span class="w">  </span><span class="nt">secretStoreRef</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-store</span>
@@ -4020,16 +5838,16 @@ az<span class="w"> </span>keyvault<span class="w"> </span>set-policy<span class=
 <span class="w">    </span><span class="nt">remoteRef</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">key/encryption-pubkey</span>
 </code></pre></div>
-<p>The operator will fetch the Azure Key vault secret and inject it as a <code>Kind=Secret</code>. Then the Kubernetes secret can be fetched by issuing:</p>
+<p>The operator will fetch the Azure Key Vault secret and inject it as a <code>Secret</code>. View the created secret by running the following command:</p>
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>secret<span class="w"> </span>secret-to-be-created<span class="w"> </span>-n<span class="w"> </span>&lt;namespace&gt;<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.data.dev-secret-test}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>base64<span class="w"> </span>-d
 </code></pre></div>
 <p>To select all secrets inside the key vault or all tags inside a secret, you can use the <code>dataFrom</code> directive:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1beta1</span>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ExternalSecret</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">all-secrets</span>
 <span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">refreshInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span><span class="w">           </span><span class="c1"># rate ESO pulls Azure Key Vault</span>
+<span class="w">  </span><span class="nt">refreshInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h0m0s</span><span class="w">           </span><span class="c1"># rate ESO pulls Azure Key Vault</span>
 <span class="w">  </span><span class="nt">secretStoreRef</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-store</span><span class="w">           </span><span class="c1"># name of the SecretStore (or kind specified)</span>
@@ -4056,13 +5874,13 @@ az<span class="w"> </span>keyvault<span class="w"> </span>set-policy<span class=
 <span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">database-credentials</span>
 <span class="w">      </span><span class="nt">metadataPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Fetch</span>
 </code></pre></div>
-<p>To get a PKCS#12 certificate from Azure Key Vault and inject it as a <code>Kind=Secret</code> of type <code>kubernetes.io/tls</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1beta1</span>
+<p>To fetch a P12 certificate (also known as PKCS12 or PFX) from Azure Key Vault and inject it as a <code>Secret</code> of type <code>kubernetes.io/tls</code>, you can use the following configuration. Note that template functions are used to transform the certificate from its original format into a PEM encoded format that Kubernetes expects for TLS secrets.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ExternalSecret</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tls-client-credentials</span>
 <span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">refreshInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span>
+<span class="w">  </span><span class="nt">refreshInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h0m0s</span>
 <span class="w">  </span><span class="nt">secretStoreRef</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-store</span>
@@ -4071,8 +5889,8 @@ az<span class="w"> </span>keyvault<span class="w"> </span>set-policy<span class=
 <span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubernetes.io/tls</span>
 <span class="w">      </span><span class="nt">engineVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v2</span>
 <span class="w">      </span><span class="nt">data</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">tls.crt</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">.tls</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">b64dec</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">pkcs12cert</span><span class="nv"> </span><span class="s">}}&quot;</span>
-<span class="w">        </span><span class="nt">tls.key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">.tls</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">b64dec</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">pkcs12key</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">        </span><span class="nt">tls.crt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">.tls</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">b64dec</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">pkcs12cert</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">        </span><span class="nt">tls.key</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">.tls</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">b64dec</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">pkcs12key</span><span class="nv"> </span><span class="s">}}&#39;</span>
 <span class="w">  </span><span class="nt">data</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tls</span>
 <span class="w">    </span><span class="nt">remoteRef</span><span class="p">:</span>
@@ -4080,9 +5898,36 @@ az<span class="w"> </span>keyvault<span class="w"> </span>set-policy<span class=
 <span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">secret/tls-client-credentials</span>
 </code></pre></div>
 <h3 id="creating-a-pushsecret">Creating a PushSecret</h3>
-<p>You can push secrets to Azure Key Vault into the different <code>secret</code>, <code>key</code> and <code>certificate</code> APIs.</p>
+<p>You can push secrets from Kubernetes into Azure Key Vault as secrets, keys or certificates by using a <code>PushSecret</code>. A <code>PushSecret</code> references a Kubernetes Secret as the source of the data. The operator can create, update or delete the corresponding secret in Azure Key Vault to match the desired state defined in the <code>PushSecret</code>.</p>
 <h4 id="pushing-to-a-secret">Pushing to a Secret</h4>
-<p>Pushing to a Secret requires no previous setup. with the secret available in Kubernetes, you can simply refer it to a PushSecret object to have it created on Azure Key Vault:
+<p>Pushing to a Secret requires no previous setup. Provided you have a Kubernetes Secret available, you can create a <code>PushSecret</code> which references it to have it created on Azure Key Vault. The operator will read the data from the Kubernetes Secret and push it to Azure Key Vault as a secret.</p>
+<p>You can optionally attach metadata to the secret via the <code>spec.data[].metadata</code> field. The following fields are supported:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>expirationDate</code></td>
+<td>string</td>
+<td>Expiration date for the secret in RFC3339 format (e.g. <code>2099-12-31T23:59:59Z</code>).</td>
+</tr>
+<tr>
+<td><code>contentType</code></td>
+<td>string</td>
+<td>Content type of the secret value (e.g. <code>application/json</code>, <code>text/plain</code>).</td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>map[string]string</td>
+<td>Arbitrary key-value tags attached to the secret in Azure Key Vault.</td>
+</tr>
+</tbody>
+</table>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Secret</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -4096,7 +5941,7 @@ az<span class="w"> </span>keyvault<span class="w"> </span>set-policy<span class=
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pushsecret-example</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
 <span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">refreshInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span><span class="w"> </span><span class="c1"># Refresh interval for which push secret will reconcile</span>
+<span class="w">  </span><span class="nt">refreshInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h0m0s</span><span class="w"> </span><span class="c1"># Refresh interval for which push secret will reconcile</span>
 <span class="w">  </span><span class="nt">deletionPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Delete</span>
 <span class="w">  </span><span class="nt">secretStoreRefs</span><span class="p">:</span><span class="w"> </span><span class="c1"># A list of secret stores to push secrets to</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-store</span>
@@ -4108,19 +5953,30 @@ az<span class="w"> </span>keyvault<span class="w"> </span>set-policy<span class=
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">match</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source-key</span><span class="w"> </span><span class="c1"># Source Kubernetes secret key containing the secret</span>
 <span class="w">        </span><span class="nt">remoteRef</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">remoteKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-azkv-secret-name</span><span class="w"> </span>
+<span class="w">          </span><span class="nt">remoteKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-azkv-secret-name</span>
 <span class="w">      </span><span class="nt">metadata</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubernetes.external-secrets.io/v1alpha1</span>
 <span class="w">        </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PushSecretMetadata</span>
 <span class="w">        </span><span class="nt">spec</span><span class="p">:</span>
 <span class="w">          </span><span class="nt">expirationDate</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2024-12-31T23:59:59Z&quot;</span><span class="w"> </span><span class="c1"># Expiration date for the secret in Azure Key Vault</span>
-</code></pre></div></p>
+<span class="w">          </span><span class="nt">contentType</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;application/json&quot;</span><span class="w"> </span><span class="c1"># Content type of the secret value in Azure Key Vault</span>
+<span class="w">          </span><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="c1"># Tags to be added to the secret in Azure Key Vault</span>
+<span class="w">            </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In order to create a PushSecret targeting keys, <code>CreateSecret</code> and <code>DeleteSecret</code> actions must be granted to the Service Principal/Identity configured on the SecretStore.</p>
+<p>In order to create a PushSecret targeting Secrets, the <a href="https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/security#key-vault-secrets-officer">Key Vault Secrets Officer</a> role, alternatively Access Policy permissions <code>Set</code> and <code>Delete</code> for Secrets must be granted to the identity configured on the SecretStore.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Omitting <code>contentType</code> (or setting it to an empty string) is interpreted as "don't change" rather than "clear": if the secret in Azure Key Vault already has a <code>ContentType</code> set, it will be preserved on update. There is currently no way to clear an existing <code>ContentType</code> via PushSecret — if you need to remove it, delete the secret from Azure Key Vault directly and let PushSecret recreate it.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>expirationDate</code> is applied only when the SecretStore uses the legacy SDK (the default). When <code>useAzureSDK: true</code> is set (required for <code>customCloudConfig</code>, including Azure Stack and Azure China Workload Identity), <code>expirationDate</code> is currently ignored: the secret is pushed without an expiry, and changing <code>expirationDate</code> alone does not trigger an update. If you need an expiry in those environments, set it directly on the secret in Azure Key Vault.</p>
 </div>
 <h4 id="pushing-to-a-key">Pushing to a Key</h4>
-<p>The first step is to generate a valid Private Key. Supported Formats include <code>PRIVATE KEY</code>, <code>RSA PRIVATE KEY</code> AND <code>EC PRIVATE KEY</code> (EC/PKCS1/PKCS8 types). After uploading your key to a Kubernetes Secret, the next step is to create a PushSecret manifest with the following configuration:</p>
+<p>The first step is to generate a valid private key. Supported formats include <code>PRIVATE KEY</code>, <code>RSA PRIVATE KEY</code> AND <code>EC PRIVATE KEY</code> (EC/PKCS1/PKCS8 types). After uploading your key to a Kubernetes Secret, the next step is to create a PushSecret manifest with the following configuration:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Secret</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -4134,7 +5990,7 @@ az<span class="w"> </span>keyvault<span class="w"> </span>set-policy<span class=
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pushsecret-example</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
 <span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">refreshInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span><span class="w"> </span><span class="c1"># Refresh interval for which push secret will reconcile</span>
+<span class="w">  </span><span class="nt">refreshInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h0m0s</span><span class="w"> </span><span class="c1"># Refresh interval for which push secret will reconcile</span>
 <span class="w">  </span><span class="nt">deletionPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Delete</span>
 <span class="w">  </span><span class="nt">secretStoreRefs</span><span class="p">:</span><span class="w"> </span><span class="c1"># A list of secret stores to push secrets to</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-store</span>
@@ -4150,27 +6006,17 @@ az<span class="w"> </span>keyvault<span class="w"> </span>set-policy<span class=
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In order to create a PushSecret targeting keys, <code>ImportKey</code> and <code>DeleteKey</code> actions must be granted to the Service Principal/Identity configured on the SecretStore.</p>
+<p>In order to create a PushSecret targeting keys, the <a href="https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/security#key-vault-crypto-officer">Key Vault Crypto Officer</a> role, alternatively Access Policy permissions <code>Import</code> and <code>Delete</code> for Keys must be granted to the identity configured on the SecretStore.</p>
 </div>
 <h4 id="pushing-to-a-certificate">Pushing to a Certificate</h4>
-<p>The first step is to generate a valid P12 certificate. Currently, only PKCS1/PKCS8 types are supported. Currently only password-less P12 certificates are supported.</p>
-<p>After uploading your P12 certificate to a Kubernetes Secret, the next step is to create a PushSecret manifest with the following configuration
+<p>The P12 format (also known as PKCS12 or PFX) is recommended format for importing certificates to Azure Key Vault. The P12 file must contain both the certificate and the private key. Make sure to use PKCS8 format for the private key, as Azure Key Vault <a href="https://learn.microsoft.com/en-us/rest/api/keyvault/certificates/import-certificate/import-certificate?view=rest-keyvault-certificates-2025-07-01">does not support PKCS1 format</a>. Additionally, only password-less P12 files are supported.</p>
+<p>Provided you have a Kubernetes Secret with a P12 certificate, you can push it to Azure Key Vault by creating a <code>PushSecret</code> with the following configuration. The operator will read the P12 file from the Kubernetes Secret and import it into Azure Key Vault as a certificate.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Secret</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source-certificate</span>
 <span class="nt">data</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">cert.p12</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MIIQZgIBAzCCECwGCSqGSIb3DQEHAaCCEB0EghAZMIIQFTCCBi8GCSqGSIb3DQEHBqCCBiAwggYcAgEAMIIGFQYJKoZIhvcNAQcBMBwGCiqGSIb3DQEMAQYwDgQIl69kTzb7QegCAggAgIIF6IOxs3Cr7vl4eT2/YdPNuVoadkQUMO6P5Ad6iuLvY7cDU7D9DO/cga/BVO0/OSIYXgTzbOg3KhreFUcoCTWne7/rbByYi6RHt2AjcZbs6CC6lTraRp5NzppfLGUUAX7v4BR93q55mB0H/j+FNx4QWhgC7sEjSawdvmeNyi+5IrCib0xDYqQ8AvN/g5Vhhp8nAqChx+1n26tRaDh7ULAY+/7D2ffG+gXHNxYn5tM7DGrcCW1FZtEqF53XVzbtyqAqtiWvSyXWYc9CyDN2mqfVG50BDAVGJT3SvuqCs7VO1w8Gs3LbT/eHRfczt2yjVZMLemVuMgHJ6Z3C1W5KjcFRsAhGLzi63d2rj091OnzhWP5YX0QrsAxgLYVeszhsq2GIb/vqIDubwawN0lZQk/guTFRAtcBMb+WDfzqJNPjOElz63/ugxNPTslWNyB7FpNWAtRxjT7qYB28JqnA8nepbzuQc/PZYPcuNFcZJD5YKE0aAhQEgaVOT0ygFdp+/VQ9LsfHgn2AVtsAmDUbt2UaXfyDDwLH19hVs6YPnYGNFiOSRBoTIgCzBreUeo3d/tJ8Ha4CA1TXrdisOGcqO9vszf8bXqgCQQzLl8lxAKZgCYCRoBF9TMkK/4IZ6NeEdxuO4hDhm6bbapIlVw5KsmqPk5i0wYT9TebH6aPyMT4OtYgVdZmTXI8RfkjduKjVxyEDIiX776yTZS0H8F0KtzJdfxX9euwneVg8ap9/7zEZNqfrtj8BGY/12LsXowExbeGLuyb+cgW8F83Pszyilc/EOrXzJOrmEwu3c/fIm93+NhZSoeZ5NwbkhUjOn0qox//FPZF8eSOFkB8Br5gnLuyFl41cOQ0rpVOI0Byz5TFhP4gQ1hH6AuAhRMdGhDWmg4Vot0CAOr3vthbBn/b9B7QQY23UzKlgeog9McrvJ1leM1Jeyl6Az/8tGFJTN7gIZNq91tKuV3bLqLvl6yCKGChy3Hrik+WJFvoaMwLsX38ljgYUYV/+d6gP0Oe87u+9pQ7xnZPaUJ8EJDA3KtFuagfNC2O/F/kZU2KV1Z4Q+3SDZ6O2KGbQestO9BYz/AZAiIfw0qw1Rb0ilskByXH0CLT3FxrefUDMGa57vxQOBeIpJXk91LCg5YDuZ/a8pcnII2dQrXfB+6rK/3fxQdZhliV8KSvQenyw6ZoVqwK+Z1nS1htikfOf3UW/KXHfGsX9L+cS2CA8IaA5EZAZS/boeXxt2ke16LNj2jlfxK8LX051MJ1sTM0I5K9hIp0oNaAKhTmdpWzudbGRRwtZJVhPOaUG4MHaTmrFNQLqOFtUvUDPl6w31fX4LQcPrZncrEahKPoq9vD9AqFvoI+Ku1hfuO+6/pB88fcE/eRtUU824nWB5EU9T7LOQim36fjZrYYAgBZbmwqiERGV68ILnpARbyaA/B/Sj4pIFYmPHo7mhhVWjz8o08QQC3zC4z5R3xisFb/67OCUqxk+ouI0mrM93IBzWVG1INTmmEvz3neeSlSNuUwj40hDOeKaUkUnQCsJWZy9Bx9yIeYfPVhE9GM57qkmzTKnJhM3cCSZEaZuXzvkut6rb7mkorfRI2pMFSK4TjWe743L7TWYXspMtRHe++nsNweZNQCniYvI+S6hVe8GYwbCMxRue+f57I3rBBdcKmBn2npTOcX/5fwYMCgjYEIJdWZZBSXhqEYw2ZEwU2rNvWXpGFcp5cPYwpKWjiD5GpL3eXOTj7Q5u9UHQWhMUQN7Lt/d6Fd9bsoTBhQlRnU6Xe4fdHtCyBMYTjyygqSfa/8XZUp+tZ2tX3zBxCYdw3bepOw4o7skUbqpKKGW0hjEoNgeoB8EFszeM48IY7M75CQY3adFqFzcG+XnTg5K5dJUihcCgn7LwWE1pu8mQTk8FjNkfJjD51Bv/YfEoPTa1XPDumIRZwSJO47mUOdVjg+qUzp3mRz6Gs4/1EJBfTOk3vLkpMUx/YutbzUD6sUZNa8PgICVPEapPbZHQdO/0LgD6DQi2kUsHuhiE2zCCCd4GCSqGSIb3DQEHAaCCCc8EggnLMIIJxzCCCcMGCyqGSIb3DQEMCgECoIIJbjCCCWowHAYKKoZIhvcNAQwBAzAOBAiVo1C5uK6CRwICCAAEgglIfhBryp3NDqqoOhAcaoKj2X2JXamh8KKk7vDW62QfYJVtormTKdnEXHE9f67ZfiB6ippsiTH1Sp1uFWirfiaBb0WhYjoQcUY6vry9Zb/GUd0NnyXnIz6WILFPfE9KC8v1Eo+pxOVj0qRWmf+CGrZCtZbi479k44/aCacBwrut8DaSuaTf9rDc3dgZj1ESYBINkBDXwm0lm/mpObhDbyaoL6+uwloM/EhE8VrtYmZLQ8781EuD6XVfem1GMuHCPiQBL8/23hze2yyB3NnjQzEcC9RLw2yPilWmB+PjfDUzIaCnOty6OUINZZqJ6ivoaA3qS8xh+kZTiCmAlHW/+5RyYXUL/c1bvlBMZz6z9n3lXBjnee3kRVbrQV/aa+069Nd76Mi8WBXhsjkm3+K14fuJksg1x3NohcL3/kW/iYHBXBFug2w6wX8l1T3XcxekBKDDNDfoy/ZExmDmsDAmUfIWb4zonLlaGq6z/9l3LkjrNS9/7C2YYEmh0xmMGD0mjzj1k932LWzvLdPaEIZTm2YsoI4TyraKc2yjXmmQWldGeN4yB/s0RfoaxPrMjkQsO6ZaU+gPqucd0JjL/e9gDVUWB0CL6Wy1T+H60iWBQhj0h5PoXuIbsocVj9PC08zniXmXUiVvbt62AyPm7oYci8BXJIc18WQ/BcO1EzPbQCVqI8DMWkyVCN/XUR7Oufseib//qZyf5XOSqwTHaetWU5tsIVKHcU8vzwPHqiDrFRmkBvn8pmtaQibaartr1XmiTCCkRX5yCzstbWWhjnRB/UD1zTxiMQUEmkmFD3zldLYuXWaaQNpNExog7vyJSMLUuTpff68sElBTRUA5pqqiVua5VsorzWaVMORsdagii4iJ/KQDoSs3KLZ6tXqNHBxoP69Mf6WJF8LZ+3FyYr+Ckpii2zgxx7D274fK6XfQpTS1yxeJPTxPZoEEZs9G03UKkrfi3Uv106akNB4XyAMxsyK26GTbKGkSig1C2gme/oCJfG8ZYin8hhl6QTlGk4ao2RWXT8Rh+qW6PDm+SVA4WJl9NI/eJwEtjmE2U1nt0IfkNy2miug3rHbr1yso4gnfdQUtMsHz055y7GgauJKADGa7N2dUdq7jbK4rbD59QsloYKpkN0TX2g86APMuMlHai33A942bsFnp+IC4ONHpj+LQZHgbr1ygVhI6EQs+x6OAw/0UrEq8fP0KVJBZHR96GJZHGCkVy6z+FVlRGTw4Lgb+dMpjucJeLQw852TLN3zHKsCglsygzGf6dfZhHs4o0tB+NyWr4Pgw/F8n3iXhTQCv95fHoTz9lav/LU1KTxADPhgczNUE6e2zrfZ0724d+eBOZXPY5endc+t2Kci+O2S2xS3XDxt4GDEWEogy6kjQoObjaHEoiOUcplbTfgptpXseivK1y3DU3gJPbNYTE8qJIOnFDwUxYDGYjlUH9h+SguCeRkO8sR5iQrYsjQQbDcPxss3rg6DeytcnsFwKf8bE/mwOpzHOE9CMrWuOoPrmtn7Lad7aTn1YN3hyeaHHVVAWzsbOyhhvEmsX5pifM26ZF57cabEiOU3itt5cYI9qxb90V4hc69NgfONx89RtrgsXd61rIsf8CeQDx3rQmQWZ54Pb0o5WUMnCbui/Z5Nw4RjeKdl38josYB3VZCXBz7g1y3ZWZUpl8GTn6TUZGXtXw8e4g18RJxpgt5OC3d27jY4fsDrVlUlYuZV21fbOG/MyT1YKQvNZlazpNPXXXyHK+Swj+A3H4It0K7IhM4R5+riH3ngcgbtF3M3StIM4lT5KVA84CRUWmDPIUskNbTUJWLw3nhDa5mmgCC9eRrb724leAFWG/FAvlsXmMl5BWWm5KYynu+y0pNpDbLmNNP6PlEBi9Ipms51BaUbQa2Y+LbFXj7dm4MBl07qroxQTOAu/DmUrxkBXU0ElpYhYrYoGbODuH/fD0C2KOJ5d6O8jRg3nN0228A2wrd18p47Q63mHyJlezxKI69o1Um6FNUjTtk6KU1Zp0AtW4mE5jkdKLfRNhlDPrgZAeYoT3OFU9UaPRauw/EJBNhSjmZC6aa4wqu60gmQ8xfnJ6YEd/XayZXqjoAiE9cAC3tF3bO8x3gpp0D0uKFhha5VgtYb9LTVlbE+Kb4DLi5fEkRWyTfywVMXLPgm5HnVE3Pz6SRwH8jHUjNSnqRRbwJfJ4Sb8LzQSzf1y0imoAfGRUcjbIC0tKAitYZ5LduaIzNyi4hBaAwsXLkLEkBClUqtI4LtCf6ETgPNRWmSWYKeiV6vzjyR0xhBi1VixpS8HN4OdA8Te3t41lp6w8nFaJcrD0LnLNPMeotJv5u+6gc3d1Jd/to+DtvxpFulh8J5WMEXCHJOV6nSKRb+rGUFh+2jp9qkSB98XGCcKn3blAFxEGYwtJXqpP53pPxa6Up/f0/KR87a4IWD0y5fZ90+HcvDCnQofuQWsMobpiFWN7ScYttbcO85xv7J6Qs+yUf9hzraN8rLW9o7LKnW+fCT8c0ggTIqTyaW1HwTtYDZtYDUIG9KDj3KY1YZN2yca+ErnS1phfI71m8JqjvH2k/+finxs2IexESmjzRTeqgEKGrhx1BdhwJ5/nd9moF6HuWqR3XCd2UtiLyhQbFt+Lo70vHm3m0Duzu03pKgGGXQQQqa1QM6YIAV6s3TSs/5cYm5KGZCd7UoKlMRzivHst/Nm6Zy+3jckpn626f7RkP/hIfT9Qvrd80PGYeCe2nNvTMfAfScYbczZ225knqeT6Z7vdY8+jgabAjREPLzKvZlL3wS6FquFEsGYn/BNAbkuJ9OhxWBgwqhTVLGaJdTAtl9cgcJqUKE76cclwit9ZF0ucUBdqV9twE2prGB/ujSKmhJ7Qd/FwEr7/UdJwQ8iVbs3+qJHBg91WPhTR9eab0YHzM+62FePZFWpQQ8m9RfP5Ku262YLhGEqmBHAHcOomhWUF/t3fQWewUIADG1Mr4nICeYUbLjsnS3IpASwM2uzFNBgdIe/i/xq5KZMvjtaaEqUviVPkAcHrS96L58DoEnsC+96ljH9lyBwJcJ3q2eT7rQNFY/yANRvNi5ix1mtZV8J6d/HWr2v5P67W3TnbN6yFjIVNwz2vqXOG5tsZ/5AWrctnu7kaanaHvmXgVgIkijHmzW21ZQQANPNgjGBkycGUXZMMUIwGwYJKoZIhvcNAQkUMQ4eDABNAHkAQwBlAHIAdDAjBgkqhkiG9w0BCRUxFgQU59WMkYzN/aRcemeMQJxzpRcC5nwwMTAhMAkGBSsOAwIaBQAEFN17vdeYvqbjC2HcRpRxhBWpv7ydBAgrPrMeGR5G/wICCAA=</span>
-<span class="c1"># Alternatively, you could also do it like this:</span>
-<span class="c1">#stringData:</span>
-<span class="c1"># certPem:  |</span>
-<span class="c1">#    -----BEGIN CERTIFICATE-----</span>
-<span class="c1">#    ...</span>
-<span class="c1">#    -----END CERTIFICATE-----</span>
-<span class="c1">#    -----BEGIN PRIVATE KEY-----</span>
-<span class="c1">#    ...</span>
-<span class="c1">#    -----END PRIVATEKEY-----</span>
-
+<span class="w">  </span><span class="nt">cert.p12</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;BASE64_ENCODED_P12_CERTIFICATE&gt;</span>
 <span class="nn">---</span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1alpha1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PushSecret</span>
@@ -4178,7 +6024,7 @@ az<span class="w"> </span>keyvault<span class="w"> </span>set-policy<span class=
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pushsecret-example</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
 <span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">refreshInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span><span class="w"> </span><span class="c1"># Refresh interval for which push secret will reconcile</span>
+<span class="w">  </span><span class="nt">refreshInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h0m0s</span><span class="w"> </span><span class="c1"># Refresh interval for which push secret will reconcile</span>
 <span class="w">  </span><span class="nt">deletionPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Delete</span>
 <span class="w">  </span><span class="nt">secretStoreRefs</span><span class="p">:</span><span class="w"> </span><span class="c1"># A list of secret stores to push secrets to</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-store</span>
@@ -4188,13 +6034,66 @@ az<span class="w"> </span>keyvault<span class="w"> </span>set-policy<span class=
 <span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source-certificate</span><span class="w"> </span><span class="c1"># Source Kubernetes secret to be pushed</span>
 <span class="w">  </span><span class="nt">data</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">match</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cert.p12</span><span class="w"> </span><span class="c1"># Source Kubernetes secret key containing the certificate</span>
+<span class="w">        </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cert.p12</span><span class="w"> </span><span class="c1"># Source Kubernetes secret key containing the P12 certificate</span>
 <span class="w">        </span><span class="nt">remoteRef</span><span class="p">:</span>
 <span class="w">          </span><span class="nt">remoteKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cert/my-azkv-cert-name</span>
-</code></pre></div></p>
+</code></pre></div>
+<p>Provided you have a Kubernetes Secret with the certificate and private key in PEM format, you can use the following configuration to transform it into a P12 file and push it to Azure Key Vault. The operator will read the certificate and private key from the Kubernetes Secret, convert them into a P12 file using template functions, and import it into Azure Key Vault as a certificate.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Secret</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source-certificate</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">tls.crt</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;BASE64_ENCODED_PEM_CERTIFICATE&gt;</span>
+<span class="w">  </span><span class="nt">tls.key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;BASE64_ENCODED_PEM_KEY&gt;</span>
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">external-secrets.io/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PushSecret</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pushsecret-example</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">refreshInterval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h0m0s</span><span class="w"> </span><span class="c1"># Refresh interval for which push secret will reconcile</span>
+<span class="w">  </span><span class="nt">deletionPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Delete</span>
+<span class="w">  </span><span class="nt">secretStoreRefs</span><span class="p">:</span><span class="w"> </span><span class="c1"># A list of secret stores to push secrets to</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">azure-store</span>
+<span class="w">      </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SecretStore</span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">secret</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source-certificate</span><span class="w"> </span><span class="c1"># Source Kubernetes secret to be pushed</span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">engineVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v2</span>
+<span class="w">    </span><span class="nt">data</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># Use the `fullPemToPkcs12` function to convert the PEM-encoded certificate chain (certificate + intermediate certificates) + private key into a P12 file.</span>
+<span class="w">      </span><span class="c1"># You can also use the `pemToPkcs12` function if you only want to include the certificate + private key without the intermediate certificates.</span>
+<span class="w">      </span><span class="nt">cert.p12</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;{{</span><span class="nv"> </span><span class="s">fullPemToPkcs12</span><span class="nv"> </span><span class="s">(index</span><span class="nv"> </span><span class="s">.</span><span class="nv"> </span><span class="s">&quot;tls.crt&quot;</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">toString)</span><span class="nv"> </span><span class="s">(index</span><span class="nv"> </span><span class="s">.</span><span class="nv"> </span><span class="s">&quot;tls.key&quot;</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">toString)</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">b64dec</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">  </span><span class="nt">data</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">match</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">secretKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cert.p12</span><span class="w"> </span><span class="c1"># Reference to the generated P12 file in the template data</span>
+<span class="w">        </span><span class="nt">remoteRef</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">remoteKey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cert/my-azkv-cert-name</span>
+</code></pre></div>
+<p>If you are using <a href="https://cert-manager.io/">cert-manager</a> and its <code>Certificate</code> resource to generate the Kubernetes Secret in a PEM format as shown above, make sure to set <code>spec.privateKey.encoding</code> to <code>PKCS8</code>. By default, cert-manager generates private keys with PKCS1 encoding, which is not supported by Azure Key Vault.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cert-manager.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Certificate</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dummy-certificate</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">dnsNames</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dummy.local</span>
+<span class="w">  </span><span class="nt">issuerRef</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">group</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cert-manager.io</span>
+<span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterIssuer</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">letsencrypt-prod</span>
+<span class="w">  </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source-certificate</span>
+<span class="w">  </span><span class="nt">privateKey</span><span class="p">:</span>
+<span class="hll"><span class="w">    </span><span class="nt">encoding</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PKCS8</span><span class="w"> </span><span class="c1"># Must be PKCS8 for Azure Key Vault</span>
+</span><span class="w">    </span><span class="nt">algorithm</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RSA</span>
+<span class="w">    </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2048</span>
+</code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In order to create a PushSecret targeting keys, <code>ImportCertificate</code> and <code>DeleteCertificate</code> actions must be granted to the Service Principal/Identity configured on the SecretStore.</p>
+<p>In order to create a PushSecret targeting certificates, the <a href="https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/security#key-vault-certificates-officer">Key Vault Certificates Officer</a> role, alternatively Access Policy permissions <code>Import</code> and <code>Delete</code> for Certificates must be granted to the identity configured on the SecretStore.</p>
 </div>
 
 
@@ -4220,7 +6119,9 @@ az<span class="w"> </span>keyvault<span class="w"> </span>set-policy<span class=
         
       </main>
       
-<img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=6658a9eb-067d-49f1-94f2-b8b00f21451e"  alt=""/>
+<img referrerpolicy="no-referrer-when-downgrade"
+  src="https://static.scarf.sh/a.png?x-pxid=6658a9eb-067d-49f1-94f2-b8b00f21451e" alt=""
+  hidden />
   
         <footer class="md-footer">
   
@@ -4229,8 +6130,8 @@ az<span class="w"> </span>keyvault<span class="w"> </span>set-policy<span class=
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      &copy; 2024 The external-secrets Authors.<br/>
-&copy; 2024 The Linux Foundation. All rights reserved.<br/><br/>
+      &copy; 2025 The external-secrets Authors.<br/>
+&copy; 2025 The Linux Foundation. All rights reserved.<br/><br/>
 The Linux Foundation has registered trademarks and uses trademarks.<br/>
 For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage/">Trademark Usage page</a>.
 
@@ -4255,10 +6156,13 @@ For a list of trademarks of The Linux Foundation, please see our <a href="https:
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.expand"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.expand"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
