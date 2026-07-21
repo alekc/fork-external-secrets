@@ -55,6 +55,9 @@ const (
 // Generator implements GitLab deploy token generation.
 type Generator struct {
 	httpClient *http.Client
+	// now returns the current time and is overridable in tests so the relative
+	// expiresAfter expiry is deterministic. Defaults to time.Now.
+	now func() time.Time
 }
 
 // deployTokenState is persisted as the generator state so that Cleanup can revoke
@@ -111,6 +114,14 @@ func (g *Generator) generate(ctx context.Context, jsonSpec *apiextensions.JSON, 
 	}
 	if spec.Spec.ExpiresAt != nil {
 		payload["expires_at"] = spec.Spec.ExpiresAt.UTC().Format(time.RFC3339)
+	}
+	// expiresAfter is a relative expiry resolved to an absolute expires_at at each
+	// generation. It stays in the outbound request only; nothing is written back to
+	// the GitlabDeployToken object, so a GitOps-managed spec does not drift. CEL
+	// admission guarantees expiresAt and expiresAfter are never both set.
+	if spec.Spec.ExpiresAfter != nil {
+		expiry := g.clock().Add(spec.Spec.ExpiresAfter.Duration)
+		payload["expires_at"] = expiry.UTC().Format(time.RFC3339)
 	}
 	body, err := json.Marshal(payload)
 	if err != nil {
@@ -226,6 +237,15 @@ func (g *Generator) client() *http.Client {
 		return g.httpClient
 	}
 	return &http.Client{Timeout: requestTimeout}
+}
+
+// clock returns the current time, using the injected now func when set so tests
+// can pin a deterministic value for the expiresAfter calculation.
+func (g *Generator) clock() time.Time {
+	if g.now != nil {
+		return g.now()
+	}
+	return time.Now()
 }
 
 func (g *Generator) fetchAuthToken(ctx context.Context, kube client.Client, namespace string, spec *genv1alpha1.GitlabDeployTokenSpec) (string, error) {
