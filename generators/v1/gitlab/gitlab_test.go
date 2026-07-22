@@ -271,6 +271,47 @@ spec:
 			"computed expiry must not be persisted into generator state")
 	})
 
+	t.Run("error when both expiresAt and expiresAfter set", func(t *testing.T) {
+		raw := fmt.Sprintf(`apiVersion: generators.external-secrets.io/v1alpha1
+kind: GitlabDeployToken
+spec:
+  projectID: "1"
+  name: "eso-token"
+  scopes:
+  - read_repository
+  expiresAt: "2030-01-01T00:00:00Z"
+  expiresAfter: "720h"
+  auth:
+    token:
+      secretRef:
+        name: %q
+        key: %q
+`, testSecret, testKey)
+		g := &Generator{}
+		_, _, err := g.generate(context.Background(), &apiextensions.JSON{Raw: []byte(raw)}, newKube(), testNamespace)
+		require.ErrorContains(t, err, "mutually exclusive")
+	})
+
+	t.Run("error when expiresAfter is below the 24h minimum", func(t *testing.T) {
+		raw := fmt.Sprintf(`apiVersion: generators.external-secrets.io/v1alpha1
+kind: GitlabDeployToken
+spec:
+  projectID: "1"
+  name: "eso-token"
+  scopes:
+  - read_repository
+  expiresAfter: "1h"
+  auth:
+    token:
+      secretRef:
+        name: %q
+        key: %q
+`, testSecret, testKey)
+		g := &Generator{}
+		_, _, err := g.generate(context.Background(), &apiextensions.JSON{Raw: []byte(raw)}, newKube(), testNamespace)
+		require.ErrorContains(t, err, "at least 24h")
+	})
+
 	t.Run("optional fields omitted are not sent", func(t *testing.T) {
 		sink := &captured{}
 		srv := newServer(t, http.StatusCreated, createResp, sink)
